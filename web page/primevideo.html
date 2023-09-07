@@ -13,13 +13,26 @@
 }
 .nav1{
     height: 50px;
-    /* background-color: rgb(2, 2, 162); */
-    
-    
+    /* background-color: rgb(0, 0, 0); */   
+}
+.nav1 a{
+   color: white;  
+}
+.para{
+    text-align: right;
+   font-size: 20px;
+   font-weight: 1000;
+   padding-top: 10px;
+
 }
 .nav2{
     height: 50px;
-    /* background-color: rgb(246, 150, 48); */
+    /* background-color: rgb(246, 150, 48); */   
+}
+.nav2 a,ul {
+    padding-top: 10px; 
+    padding-left: 100px; 
+    color: white;
 }
 .nav3{
     height: 50px;
@@ -81,16 +94,33 @@
     height: 600px;
     background-color: rgb(237, 216, 27);
 }
-.card3{
-    height: 400px;
-    background-color: rgb(150, 44, 118);
-    color: aliceblue;
+.card03{
+    height: 600px;
+    background-image: url(spiderman.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.card4{
+.card3{
+    height: 600px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    padding-top: 200px;
+}
+.card3 button{
+    height: 50px;
+}
+.card3 h1{
+    font-size: 56px;
+    padding-left: 15px;
+}
+.card3 p{
+    font-size: 30px;
+    padding-left: 15px;
+}
+/* .card4{
     height: 200px;
     background-color: rgb(22, 126, 124);
-}
+} */
 .row3{
     height: 600px;
     background-color: rgb(161, 186, 185);
@@ -217,10 +247,10 @@
     height: 50px;
     background-color: rgb(84, 121, 215);
 }
-.logo{
+/* .logo{
     text-align: right;
     color: aliceblue;
-}
+} */
 .button1{
     /* padding-top: 30px; */
     width: 30%;
@@ -240,14 +270,20 @@
 </head>
 <body>
     <!-- nav bar -->
-    <div class="row nav bg-dark">
-        <div class="col-4 nav1"> <p class="logo">Prime Video</p></div>
+    <div class="row nav">
+        <div class="col-4 nav1"> <p class="para"><a href="#">Prime Video</a></p></div>
         <div class="col-4 nav2" > 
-            <ul class="row home">
+            <!-- <ul class="row home">
                 <li class="a">Home</li>
                 <li class="a">Store</li>
                 <li class="a">Live Tv</li>
                 <li class="a">Category</li>
+            </ul> -->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Live Tv</a></li>
+                <li><a href="#">Category</a></li>
             </ul>
         </div>
         <div class="col-4 nav3"></div>
@@ -283,13 +319,21 @@
     </div>
     <!-- container 2 -->
     <div class="row row2">
-        <div class="col-12 card3">
+        <div class="col-6 card03">  </div>
+        <div class="col-6 card3">
             <h1>Movie rentals on Prime Video</h1>
             <p>Early Access to new movies, before digital subscription</p>
+            <!-- <button>Rent Now</button> -->
+            <button class ='button1' type = 'submit'>
+                    <div>
+                        <span >Rent Now</span>
+                    </div>
+                    
+            </button>
         </div>
-        <div class="col-12 card4">
-            <button>Rent Now</button>
-        </div>
+        <!-- <div class="col-12 card4">
+            
+        </div> -->
 
 
     </div>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.container-1,.container-2,.container-3,.container-4,.container-5,.container-6,.container-7
+,.container-8,.container-9,.container-10,.container-11,.container-12,.container-13
+,.container-14{
+    height: 200px;
+    display: flex;
+    background-color: rgb(200, 204, 203);
+    /* flex-direction: row; */
+    
+
+}
+.container-1{
+    flex-direction: row;
+}
+.container-2{
+    flex-direction: row-reverse;
+}
+.container-3{
+    flex-direction: column;
+}
+.container-4{
+    flex-direction: column-reverse;
+}
+.container-5{
+    flex-wrap:nowrap;
+}
+.container-6{
+    flex-wrap:wrap;
+}
+.container-7{
+    flex-wrap:wrap-reverse;
+}
+.container-8{
+    flex-flow:column wrap;
+    
+}
+.container-9{
+    /* flex-flow:column wrap; */
+    justify-content: flex-start;
+    
+}
+.container-10{
+    /* flex-flow:column wrap; */
+    justify-content:flex-end;
+    
+}
+.container-11{
+    /* flex-flow:column wrap; */
+    justify-content:center;
+    /* gap: 10px; */
+    
+}
+.container-12{
+    /* flex-flow:column wrap; */
+    justify-content:space-between;
+    
+}
+.container-13{
+    
+    justify-content:space-around;
+    
+}
+.container-14{
+    /* flex-flow:column wrap; */
+    justify-content:space-evenly;
+    
+}
+.container-1 div,.container-2 div,.container-3 div,.container-4 div,.container-5 div,.container-6 div,.container-7 div
+,.container-8 div,.container-9 div,.container-10 div,.container-11 div
+,.container-12 div,.container-13 div,.container-14 div{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+    
+}
+/* .box1{
+    flex:1;
+}
+.box2{
+    flex:1;
+}
+.box3{
+    flex:1;
+} */
+</style>
+</head>
+<body>
+    <h4>flex row</h4>
+    <div class="container-1">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex row-reverse</h4>
+    <div class="container-2">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex-coloum</h4>
+    <div class="container-3">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex-coloum-reverse</h4>
+    <div class="container-4">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex-nowarp</h4>
+    <div class="container-5">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex-warp</h4>
+    <div class="container-6">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex-warp-reverse</h4>
+    <div class="container-7">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex-flow column warp</h4>
+    <div class="container-8">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+    </div>
+
+    <h4>flex-flow column warp - justify-content: flex-start</h4>
+    <div class="container-9">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">4</div>
+       <div class="box2">5</div>
+       <div class="box3">6</div>
+       <div class="box1">7</div>
+       <div class="box2">8</div>
+       <div class="box3">9</div>
+       <div class="box1">10</div>
+       <div class="box2">11</div>
+       <div class="box3">12</div>
+      
+    </div>
+
+    <h4>flex-flow column warp - justify-content: flex-end</h4>
+    <div class="container-10">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">4</div>
+       <div class="box2">5</div>
+       <div class="box3">6</div>
+       <div class="box1">7</div>
+       <div class="box2">8</div>
+       <div class="box3">9</div>
+       <div class="box1">10</div>
+       <div class="box2">11</div>
+       <div class="box3">12</div>
+      
+    </div>
+
+    <h4>flex-flow column warp - justify-content: center</h4>
+    <div class="container-11">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">4</div>
+       <div class="box2">5</div>
+       <div class="box3">6</div>
+       <div class="box1">7</div>
+       <div class="box2">8</div>
+       <div class="box3">9</div>
+       <div class="box1">10</div>
+       <div class="box2">11</div>
+       <div class="box3">12</div>
+      
+    </div>
+
+    <h4>flex-flow column warp - justify-content: space between</h4>
+    <div class="container-12">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">4</div>
+       <div class="box2">5</div>
+       <div class="box3">6</div>
+       <div class="box1">7</div>
+       <div class="box2">8</div>
+       <div class="box3">9</div>
+       <div class="box1">10</div>
+       <div class="box2">11</div>
+       <div class="box3">12</div>
+      
+    </div>
+
+    <h4>flex-flow column warp - justify-content: space around</h4>
+    <div class="container-13">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">4</div>
+       <div class="box2">5</div>
+       <div class="box3">6</div>
+       <div class="box1">7</div>
+       <div class="box2">8</div>
+       <div class="box3">9</div>
+       <div class="box1">10</div>
+       <div class="box2">11</div>
+       <div class="box3">12</div>
+      
+    </div>
+
+    <h4>flex-flow column warp - justify-content: space eventually</h4>
+    <div class="container-14">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">4</div>
+       <div class="box2">5</div>
+       <div class="box3">6</div>
+       <div class="box1">7</div>
+       <div class="box2">8</div>
+       <div class="box3">9</div>
+       <div class="box1">10</div>
+       <div class="box2">11</div>
+       <div class="box3">12</div>
+      
+    </div>
+    
+</body>
+</html>

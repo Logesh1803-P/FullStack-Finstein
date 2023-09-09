@@ -361,21 +361,31 @@
     background-size: cover;
 }
 .card11{
-    height: 200px;
-    background-color: rgb(0, 0, 0);
-   
+    height: 160px;
+    background-color:#222;
+    display: flex;
+    text-align: center;
+    padding-top: 30px;
     
+      
 }
-.cbox{
-    height: 200px;
-    width: 800px;
+.cbox div{ 
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.cbox a{
+    color: #0f79af;
+    font-size: 17px;
+}
+.foot{
+    
 }
 .card11 img{
     height: 32px;
-    width: 150px;
+    width: 120px;
     /* align-items: center; */
     
-
 }
 /* .card12{
     height: 50px;
@@ -413,6 +423,10 @@
 .s{
     /* padding-right: 10px; */
     margin-right: 10px;
+}
+.footer{
+    color:#949494;
+    font-size: 17px;
 }
 
 
@@ -583,9 +597,14 @@
     <!-- container 6 -->
         <div class="row card11">
             <div class="cbox">
-                <img class="DVPAWebWidgetsFooter_Footer__logo" src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/web_footer_logo._CB462908456_.png" alt="Amazon">
-
-
+                <img class="logo" src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/web_footer_logo._CB462908456_.png" alt="Amazon">
+                
+                <div>
+                    <p class ="foot"><span><a href="#">Teams and privacy Notice</a></span></p>
+                    <p class ="foot"><span><a href="#">Send us feedback</a></span></p>
+                    <p class ="foot"><span><a href="#">Help</a></span></p>
+                </div>
+                <p class="footer"> © 1996-2023, Amazon.com, Inc. or its affiliates</p>
             </div>
             <!-- <p>Amazon</p> -->
         </div>

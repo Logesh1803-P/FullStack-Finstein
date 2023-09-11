@@ -1,0 +1,176 @@
+
+.container-1,.container-2,.container-3,.container-4,.container-5,.container-6,.container-7
+,.container-8,.container-9,.container-10,.container-11,.container-12,.container-13
+,.container-14,.container-15,.container-16,.container-17,.container-18,.container-19
+,.container-20,.container-21,.container-22,.container-23{
+    height: 300px;
+    display: flex;
+    background-color: rgb(200, 204, 203);
+    width: 60%;
+    /* flex-direction: row; */
+    
+
+}
+.container-1{
+    flex-direction: row;
+}
+.container-2{
+    flex-direction: row-reverse;
+}
+.container-3{
+    flex-direction: column;
+}
+.container-4{
+    flex-direction: column-reverse;
+}
+.container-5{
+    flex-wrap:nowrap;
+}
+.container-6{
+    flex-wrap:wrap;
+}
+.container-7{
+    flex-wrap:wrap-reverse;
+}
+.container-8{
+    flex-flow:column wrap;
+    
+}
+.container-9{
+    flex-wrap: wrap;
+    /* flex-flow:column wrap; */
+    justify-content: flex-start;
+    
+}
+.container-10{
+    flex-wrap: wrap;
+    /* flex-flow: row; */
+    /* flex-flow:column wrap; */
+    justify-content:flex-end;
+    
+}
+.container-11{
+    /* flex-flow:column wrap; */
+    flex-wrap: wrap;
+    justify-content:center;
+    /* gap: 10px; */
+    
+}
+.container-12{
+    flex-wrap: wrap;
+    justify-content:space-between;
+    
+}
+.container-13{
+    flex-wrap: wrap;
+    
+    justify-content:space-around;
+    
+}
+.container-14{
+    flex-wrap: wrap;
+    /* flex-flow:column wrap; */
+    justify-content:space-evenly;
+    
+}
+.container-15{
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.container-16{
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 10px;
+}
+.container-17{
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.container-18{
+    /* flex-wrap: wrap; */
+    align-items: stretch;
+    gap: 10px;
+}
+.container-19{
+    flex-wrap: wrap;
+    align-items:baseline;
+    gap: 10px;
+}
+.container-20{
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+}
+.container-21{
+    flex-wrap: wrap;
+    align-content: flex-end;
+    gap: 10px;
+}
+.container-22{
+    flex-wrap: wrap;
+    align-content:center;
+    gap: 10px;
+}
+.container-23{
+    flex-wrap: wrap;
+    align-content :stretch;
+    gap: 10px;
+}
+
+.container-1 div,.container-2 div,.container-3 div,.container-4 div,.container-5 div,.container-6 div,.container-7 div
+,.container-8 div,.container-9 div,.container-10 div,.container-11 div
+,.container-12 div,.container-13 div,.container-14 div,.container-20 div,.container-21 div
+,.container-22 div,.container-23 div{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+    
+}
+.i1{
+    height: 150px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+    padding-top: 80px;
+}
+.i2{
+    height: 200px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.i3{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.i4{
+    height: 70px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.box-1{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+    
+}
+.box-2{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.box-3{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.box-4{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}

@@ -8,8 +8,8 @@
 <style>
 .container-1,.container-2,.container-3,.container-4,.container-5,.container-6,.container-7
 ,.container-8,.container-9,.container-10,.container-11,.container-12,.container-13
-,.container-14{
-    height: 200px;
+,.container-14,.container-15,.container-16,.container-17,.container-18,.container-19{
+    height: 300px;
     display: flex;
     background-color: rgb(200, 204, 203);
     /* flex-direction: row; */
@@ -58,7 +58,7 @@
     
 }
 .container-12{
-    /* flex-flow:column wrap; */
+    flex-wrap: wrap;
     justify-content:space-between;
     
 }
@@ -72,6 +72,26 @@
     justify-content:space-evenly;
     
 }
+.container-15{
+    align-items: flex-start;
+}
+.container-16{
+    align-items: flex-end;
+    gap: 10px;
+}
+.container-17{
+    align-items: center;
+    gap: 10px;
+}
+.container-18{
+    align-items: stretch;
+    gap: 10px;
+}
+.container-19{
+    align-items: baseline;
+    gap: 10px;
+}
+
 .container-1 div,.container-2 div,.container-3 div,.container-4 div,.container-5 div,.container-6 div,.container-7 div
 ,.container-8 div,.container-9 div,.container-10 div,.container-11 div
 ,.container-12 div,.container-13 div,.container-14 div{
@@ -81,15 +101,51 @@
     border: 1px solid;
     
 }
-/* .box1{
-    flex:1;
+.i1{
+    height: 150px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
 }
-.box2{
-    flex:1;
+.i2{
+    height: 200px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
 }
-.box3{
-    flex:1;
-} */
+.i3{
+    height: 50px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.i4{
+    height: 70px;
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.box-1{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+    
+}
+.box-2{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.box-3{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
+.box-4{
+    width: 100px;
+    background-color: rgb(41, 124, 166);
+    border: 1px solid;
+}
 </style>
 </head>
 <body>
@@ -239,7 +295,7 @@
        <div class="box3">3</div>
     </div>
 
-    <h4>flex-flow column warp - justify-content: flex-start</h4>
+    <h4>justify-content: flex-start</h4>
     <div class="container-9">
        <div class="box1">1</div>
        <div class="box2">2</div>
@@ -256,7 +312,7 @@
       
     </div>
 
-    <h4>flex-flow column warp - justify-content: flex-end</h4>
+    <h4>justify-content: flex-end</h4>
     <div class="container-10">
        <div class="box1">1</div>
        <div class="box2">2</div>
@@ -273,7 +329,7 @@
       
     </div>
 
-    <h4>flex-flow column warp - justify-content: center</h4>
+    <h4>Justify-content: center</h4>
     <div class="container-11">
        <div class="box1">1</div>
        <div class="box2">2</div>
@@ -290,8 +346,20 @@
       
     </div>
 
-    <h4>flex-flow column warp - justify-content: space between</h4>
+    <h4> Justify-content: space between</h4>
     <div class="container-12">
+       <div class="box1">1</div>
+       <div class="box2">2</div>
+       <div class="box3">3</div>
+       <div class="box1">4</div>
+       <div class="box2">5</div>
+       <div class="box3">6</div>
+       <div class="box1">7</div>
+       <div class="box2">8</div>
+       <div class="box3">9</div>
+       <div class="box1">10</div>
+       <div class="box2">11</div>
+       <div class="box3">12</div>
        <div class="box1">1</div>
        <div class="box2">2</div>
        <div class="box3">3</div>
@@ -307,7 +375,7 @@
       
     </div>
 
-    <h4>flex-flow column warp - justify-content: space around</h4>
+    <h4> justify-content: space around</h4>
     <div class="container-13">
        <div class="box1">1</div>
        <div class="box2">2</div>
@@ -324,7 +392,7 @@
       
     </div>
 
-    <h4>flex-flow column warp - justify-content: space eventually</h4>
+    <h4> justify-content: space eventually</h4>
     <div class="container-14">
        <div class="box1">1</div>
        <div class="box2">2</div>
@@ -338,6 +406,51 @@
        <div class="box1">10</div>
        <div class="box2">11</div>
        <div class="box3">12</div>
+      
+    </div>
+
+    <h4> Align-items:flex-start</h4>
+    <div class="container-15">
+       <div class="box1 i1">1</div>
+       <div class="box2 i2">2</div>
+       <div class="box3 i3">3</div>
+       <div class="box1 i4">4</div>
+      
+    </div>
+
+    <h4> Align-items:flex-end</h4>
+    <div class="container-16">
+       <div class="box1 i1">1</div>
+       <div class="box2 i2">2</div>
+       <div class="box3 i3">3</div>
+       <div class="box1 i4">4</div>
+      
+    </div>
+
+    <h4> Align-items:center</h4>
+    <div class="container-17">
+       <div class="box1 i1">1</div>
+       <div class="box2 i2">2</div>
+       <div class="box3 i3">3</div>
+       <div class="box1 i4">4</div>
+      
+    </div>
+
+    <h4> Align-items:strech</h4>
+    <div class="container-18">
+       <div class="box-1 ">1</div>
+       <div class="box-2 ">2</div>
+       <div class="box-3 ">3</div>
+       <div class="box-4 ">4</div>
+      
+    </div>
+
+    <h4> Align-items:baseline</h4>
+    <div class="container-19">
+       <div class="box1 i1"><p>text1</p></div>
+       <div class="box2 i2"><p>text2</p></div>
+       <div class="box3 i3"><p>text3</p></div>
+       <div class="box4 i4"><p>text4</p></div>
       
     </div>
     

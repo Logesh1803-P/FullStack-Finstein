@@ -8,7 +8,7 @@
     height: 400px;
     display: flex;
     background-color: rgb(200, 204, 203);
-    width: 60%;
+    /* width: 60%; */
     /* flex-direction: row; */
     
 
@@ -36,7 +36,9 @@
 }
 .container-8{
     flex-flow:column wrap;
-    gap :10px
+    /* gap :10px */
+    row-gap: 10px;
+    column-gap: 10px;
     
 }
 .container-9{
@@ -66,13 +68,15 @@
 }
 .container-13{
     flex-wrap: wrap;
+    /* flex-flow: column wrap; */
+
     
     justify-content:space-around;
     
 }
 .container-14{
-    /* flex-wrap: wrap; */
-    flex-flow:column wrap;
+    flex-wrap: wrap;
+    /* flex-flow:column wrap; */
     justify-content:space-evenly;
     
 }
@@ -130,9 +134,25 @@
     align-content :space-around;
     gap: 10px;
 }
-.container-26 :nth-child(3){
-    order: -1;
+.container-26 :nth-child(1){
+    order: 5;
     background-color: rgb(225, 131, 131);
+}
+.container-26 :nth-child(2){
+    order: 3;
+    background-color: rgb(203, 225, 131);
+}
+.container-26 :nth-child(3){
+    order: 2;
+    background-color: rgb(92, 168, 45);
+}
+.container-26 :nth-child(4){
+    order: 1;
+    background-color: rgb(109, 222, 211);
+}
+.container-26 :nth-child(5){
+    order: 4;
+    background-color: rgb(66, 100, 210);
 }
 .container-27 :nth-child(1){
     flex-grow: 2.5;
@@ -145,7 +165,7 @@
 
 }
 .container-28 :nth-child(2){
-    flex-shrink: 3;
+    flex-shrink: 0;
     background-color:  rgb(225, 131, 131);
 
 }
@@ -190,8 +210,10 @@
 ,.container-32 div,.container-33 div,.container-34 div{
     height: 100px;
     width: 100px;
+    
     background-color: rgb(41, 124, 166);
     border: 1px solid;
+    border-radius: 20px;
     
 }
 .i1{

@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background: #daede2;
+    padding: 5%;
+}
+body{
+    background-color: #77c4d3;
+    /* display: block; */
+    padding-top: 5%;
+    
+}
+
+h1{
+    color: white;
+    font-size: 45px;
+    font-weight: 300;
+    background: red;
+    padding: 25px 45px 25px 45px;
+    margin: 0 5% 0% 5%;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+h2{
+    font-size: 240px;
+    color: white;
+    padding: 0 5% 5% 5%;
+    width: 55%;
+    padding-top: 0px;
+}
+.summary{
+    padding:5%;
+}
+.summary p{
+    color: white;
+    text-transform:uppercase ;
+    font-size: 30px;
+    letter-spacing: 2px;
+    width: 60%;
+    padding-bottom: 50px;
+    /* border-bottom: 1px solid red; */   
+}
+.p1{
+    border-bottom: 1px solid red;   
+}
+.p1 abbr{
+    text-decoration: none;
+    color: white;
+}
+.p2{
+    padding-top: 55px;
+}
+.p2 a{
+    text-decoration: underline;
+    text-decoration-color: rgb(48, 120, 159);
+    color: white
+}
+.preamble{
+    background: rgba(255,255,255,0.9);;
+    color: black;
+    margin-left: -90px;
+    padding: 5%;
+    padding-left: 10%;
+    width: 68%;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+.preamble h3{
+    
+    font-weight: 200;
+}
+h3{
+    font-size: 55px;
+    padding-bottom: 40px;
+
+}
+.preamble p{
+    padding-bottom: 40px;
+}
+#zen-supporting{
+    padding: 100px;
+    margin-left: 50px;
+    color: white;
+    width: 50%;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+
+}

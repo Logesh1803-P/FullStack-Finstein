@@ -2,15 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    position: relative;
 }
 html{
     background: #daede2;
     padding: 5%;
 }
 body{
-    background-color: #77c4d3;
-    /* display: block; */
+    background: #77c4d3;
+    
     padding-top: 5%;
+    /* position: relative; */
     
 }
 
@@ -61,7 +63,7 @@ h2{
     color: white
 }
 .preamble{
-    background: rgba(255,255,255,0.9);;
+    background: rgba(255,255,255,0.9);
     color: black;
     margin-left: -90px;
     padding: 5%;
@@ -81,17 +83,139 @@ h3{
     padding-bottom: 40px;
 
 }
-.preamble p{
-    padding-bottom: 40px;
-}
-#zen-supporting{
-    padding: 100px;
-    margin-left: 50px;
-    color: white;
-    width: 50%;
+/* p{
+    
     font-size: 30px;
     font-weight: 300;
     letter-spacing: 2px;
     line-height: 40px;
 
+} */
+.preamble p{
+    padding-bottom: 40px;
+}
+/* #zen-supporting{
+    position: relative;
+} */
+.explanation{
+
+    color: white;
+    width: 45%;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+    padding: 15% 5% 5% 5%;
+    margin-left: 5%;
+    position: relative;
+    float: left;
+    
+
+}
+.participation{
+    background: red;
+    color: white;
+    padding: 5%;
+    width: 45%;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+    position: relative;
+    float: right;
+    margin-right: 5%;
+    margin-top: 10%;
+    z-index: 2;
+    /* position: absolute; */
+    /* left: 50%;
+    top: 543%; */
+    
+}
+.benefits{
+    width: 30%;
+    background: rgba(255,255,255,0.9);
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-left: 5%;
+    /* position: relative; */
+    margin: 15% 0% 0% 5%;
+    padding: 5%;
+    float: left;   
+}
+.requirements{
+    /* width: 30%; */
+    background: rgba(255,255,255,0.9);
+    float: right;
+    width: 65%;
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+    padding: 5%;
+    z-index: 2;  
+}
+.requirements p{
+    /* padding: 5% 0% 0% 0%; */
+    padding-bottom: 40px;
+}
+.requirements p:last-child{
+    padding-top: 5%;
+    border-top: 1px solid red;
+    text-transform: uppercase;
+
+}
+footer{
+    float: left;
+    background: rgba(246,247,146,0.9);
+    clear: both;
+    margin: 0% 0% 0% 10%;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+    width: 50%;
+    height: 10%;
+    padding: 2%;
+}
+footer a{
+    padding-right: 2%;
+}
+aside{
+    background: rgba(246,247,146,0.9);
+    position: absolute;
+    width: 30%;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 40px;
+    top:20px;
+    color: rgb(0, 0, 0);
+    padding: 5%;
+    left: 70%;
+    z-index: 2;
+}
+aside li{
+    padding-bottom: 20px;
+}
+aside a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+aside li:last-child{
+    padding-bottom: 160px;
+}
+ul{
+   list-style: none;
+}
+.extra1{
+    background: rgba(51,55,69,0.9);
+    position: fixed;
+    width: 30%;
+    top: 0%;
+    right: 0%;
+    height: 100%;
 }

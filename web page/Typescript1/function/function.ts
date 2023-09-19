@@ -25,7 +25,7 @@ console.log(sum1( 2))
 // optional parameter
 
 
-function sum2( a : [number,string?] , b : string , c?:number){
+function sum2( a : [number,string?] , b : string , c?:number):string{
     return a + b + c
 
 }
@@ -38,9 +38,9 @@ console.log('sum is :',sum2( [100],'loge',100))
 
 // dynamic number of parameter
 
-                    function sum3( a : number ,... b : number[] ):number{
+                    function sum3( a : number ,... b : number[] ):number[]{
 
-                        let add:any = b.map((e) => e + a )
+                        let add = b.map((e) => e + a )
 
                         return add
 

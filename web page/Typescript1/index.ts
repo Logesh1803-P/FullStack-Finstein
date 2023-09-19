@@ -2,8 +2,8 @@
 // // let a:number = 2
 // // typeof(a)
 // // annotationL
-// var num1: number;
-// num1 = 4;
+var num1: number;
+num1 = 4;
 // console.log(num1)
 
 // var num2: number = 2;
@@ -15,11 +15,11 @@
 // var num4 = num3 + 100;
 // console.log(num4);
 
-// var str1 = num1 + "some string";
-// console.log(str1)
+var str1 = num1 + "some string";
+console.log(str1)
 
-// // var nothappy : number = num1 + 'some string';
-// // console.log(nothappy)
+// var nothappy : number = num1 + 'some string';
+// console.log(nothappy)  --------------------------------ERROR
 
 // var num6:boolean = true;
 // console.log(num6)
@@ -50,39 +50,39 @@
 // let arr3 : (number|string|boolean|null|bigint|any)[];
 // arr3 = ['logesh'];
 
-// let a : {
-//     name : (string|boolean),
-//     age :  number|null ,
-// }
-
-// a = {
-//     name : ['logesh','david',true],
-//     age : 21
-// }
-// console.log((a.name[2]))
-
-let a : { 
-    name : (string|boolean),
-    age :  number,
-}[]
-
-a = [
-    {name:'logesh', age: 21},
-    {name:'david',age : 22},
-    {name:'kavin',age : 23},
-    {name:'sams',age : 24}
-]
-
-let filterByAge = a.filter(({age}) => age <= 21)
-console.log(filterByAge)
-
-
-
-for(let i = 0; i < a.length; i++){
-    if(a[i].age > 21){
-        console.log("Age :",a[i].age)
-    }     
+let a : {
+    name : (string|boolean)[],
+    age :  number|null ,
 }
+
+a = {
+    name : ['logesh','david',true],
+    age : 21
+}
+console.log((a.name[2]))
+
+// let a : { 
+//     name : (string|boolean),
+//     age :  number,
+// }[]
+
+// a = [
+//     {name:'logesh', age: 21},
+//     {name:'david',age : 22},
+//     {name:'kavin',age : 23},
+//     {name:'sams',age : 24}
+// ]
+
+// let filterByAge = a.filter(({age}) => age <= 21)
+// console.log(filterByAge)
+
+
+
+// for(let i = 0; i < a.length; i++){
+//     if(a[i].age > 21){
+//         console.log("Age :",a[i].age)
+//     }     
+// }
 
 
 

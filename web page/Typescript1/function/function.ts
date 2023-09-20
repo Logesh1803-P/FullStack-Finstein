@@ -1,4 +1,4 @@
-// Normal Functions
+//---------------------------------- Normal Functions-------------------------------------
 
 function pow( a : number, b : number): number|string{
     
@@ -8,7 +8,9 @@ function pow( a : number, b : number): number|string{
 
 console.log(pow(4,2))
 
-// Normal function with default values
+
+
+// ---------------------------------Normal function with default values-----------------------------------
 
 function sum1( a : number = 6 , b : string ):string{
 
@@ -23,7 +25,7 @@ console.log(sum1( undefined,'logesh'))
 
 
 
-// optional parameter
+// --------------------------------------optional parameter---------------------------------------------
 
 
 function sum2( a : [number,string?] , b : string , c?:number):string{
@@ -41,7 +43,7 @@ console.log('sum is :',sum2( [100],'loge',100))
 // console.log(sum2( [],'l' ))
 
 
-// dynamic number of parameter
+// ---------------------------------dynamic number of parameter--------------------------------------
 
                     function sum3( a : number ,... b : number[] ):number[]{
 
@@ -65,7 +67,7 @@ console.log('sum is :',sum2( [100],'loge',100))
 
 
 
-// rest operator
+// spread operator
 let a1 : number[] = [3,5]
   
 console.log(1,2,a1)

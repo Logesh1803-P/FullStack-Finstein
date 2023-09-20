@@ -1,25 +1,25 @@
 //// ---------------------------------creating class | Encapsulation------------------------------------
 
-// class A{
-//       m:number
-//       n:number
+class A1{
+      m:number
+      n:number
 
-//     // constructor(){
-//     //     this.m = 10
-//     // }
+    // constructor(){
+    //     this.m = 10
+    // }
 
     
 
-//     constructor(i:number,j:number){
-//         this.m = i
-//         this.n = j
-//     }
+    constructor(i:number,j:number){
+        this.m = i
+        this.n = j
+    }
 
-//     inc(){
-//         return this.m + 1
-//     }
+    inc(){
+        return this.m + 1
+    }
 
-// }
+}
 
 ////----------------------------------------- creating object---------------------------------------------
 //     // let a1 = new A()
@@ -47,22 +47,28 @@
 
 //// ----------------------------------------- Inheritant-------------------------------------------------  
 
-// class B extends A{
+class B extends A1{
 
+    constructor(i:number,j:number,k:number){
+        super(i,j);  //------------------------
 
-//     decrement(){
-//         return this.n - 3
-//     }
-//     inc(){
-//         return this.m + 100
-//     }
+    }
+    // super(i,j,n){}
 
-// }
-//     let b1 = new B(2,4)
+    decrement(){
+        return this.n - 3
+    }
+    inc(){
+        let classA_Inc = super.inc() + 100
+        return classA_Inc
+    }
 
-//     console.log(b1.decrement())
-//     console.log(b1.m)
-//     console.log(b1.inc())
+}
+    let b1 = new B(20,40,0)
+
+    console.log(b1.decrement())
+    console.log(b1.m)
+    console.log(b1.inc())
 
 
 //// --------------------------------- relation ship father ---> child----------------------------------------
@@ -80,27 +86,27 @@
 
 
 // //--------------------------------------Abstraction---------------------------------------------
-abstract class F{
-    m:number = 4;
-    abstract increment():number;
-}
-// let m:number = 10
-class G extends F{
-    // m:number = 10;
+// abstract class F{
+//     m:number = 4;
+//     abstract increment():number;
+// }
+// // let m:number = 10
+// class G extends F{
+//     // m:number = 10;
     
     
-    constructor(){
-        super()
-        // m = 7
-        // this.m = 10
-    }
+//     constructor(){
+//         super()
+//         // m = 7
+//         // this.m = 10
+//     }
 
-    increment():number {
-        return this.m + 5
-    }
-}
-let f1 = new G();
-console.log(f1.increment())
+//     increment():number {
+//         return this.m + 5
+//     }
+// }
+// let f1 = new G();
+// console.log(f1.increment())
 
 //    //---------------------------------- Interface----------------------------------------------
 // interface D{

@@ -50,7 +50,7 @@ class A1{
 class B extends A1{
 
     constructor(i:number,j:number,k:number){
-        super(i,j);  //------------------------
+        super(i,j);  //-- the super keyword to call methods and constructors of the superclass (the parent class) from a subclass (the child class). // Call the constructor of class A with i and j----------------------
 
     }
     // super(i,j,n){}
@@ -86,27 +86,34 @@ class B extends A1{
 
 
 // //--------------------------------------Abstraction---------------------------------------------
-// abstract class F{
-//     m:number = 4;
-//     abstract increment():number;
-// }
-// // let m:number = 10
-// class G extends F{
-//     // m:number = 10;
-    
-    
-//     constructor(){
-//         super()
-//         // m = 7
-//         // this.m = 10
-//     }
+    abstract class F{
 
-//     increment():number {
-//         return this.m + 5
-//     }
-// }
-// let f1 = new G();
-// console.log(f1.increment())
+        m:number = 4;
+        str:string;
+        constructor(name:string){
+            this.str = name
+
+        }
+        abstract increment():number; //------------// Abstract method that must be implemented by subclasses------
+    }
+    // let m:number = 10
+    class G extends F{
+        // m:number = 10;
+        
+        
+        constructor(){
+            super('loge')
+            // m = 7
+            // this.m = 10
+        }
+
+        increment():number {
+            return this.m + 5
+        }
+    }
+    let f1 = new G();
+    console.log(f1.increment())
+    console.log(f1.str)
 
 //    //---------------------------------- Interface----------------------------------------------
 // interface D{

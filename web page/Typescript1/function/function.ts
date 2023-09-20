@@ -1,6 +1,6 @@
 // Normal Functions
 
-function pow( a : number, b : number): number{
+function pow( a : number, b : number): number|string{
     
     return  Math.pow(a,b)
     
@@ -10,7 +10,7 @@ console.log(pow(4,2))
 
 // Normal function with default values
 
-function sum1( a : number , b : string = 'logesh'):string{
+function sum1( a : number = 6 , b : string ):string{
 
     return a + b
 
@@ -18,7 +18,8 @@ function sum1( a : number , b : string = 'logesh'):string{
  
 
 console.log(sum1( 2, 'loge' ))
-console.log(sum1( 2))
+// console.log(sum1( 2))
+console.log(sum1( undefined,'logesh'))
 
 
 
@@ -26,7 +27,11 @@ console.log(sum1( 2))
 
 
 function sum2( a : [number,string?] , b : string , c?:number):string{
-    return a + b + c
+    if(typeof(c)!== undefined){
+        return a + b + c
+
+    }
+    return a + b 
 
 }
  

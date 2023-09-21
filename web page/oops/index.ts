@@ -1,25 +1,25 @@
 //// ---------------------------------creating class | Encapsulation------------------------------------
 
-class A1{
-      m:number
-      n:number
+// class A1{
+//       m:number
+//       n:number
 
-    // constructor(){
-    //     this.m = 10
-    // }
+//     // constructor(){
+//     //     this.m = 10
+//     // }
 
     
 
-    constructor(i:number,j:number){
-        this.m = i
-        this.n = j
-    }
+//     constructor(i:number,j:number){
+//         this.m = i
+//         this.n = j
+//     }
 
-    inc(){
-        return this.m + 1
-    }
+//     inc(){
+//         return this.m + 1
+//     }
 
-}
+// }
 
 ////----------------------------------------- creating object---------------------------------------------
 //     // let a1 = new A()
@@ -47,28 +47,28 @@ class A1{
 
 //// ----------------------------------------- Inheritant-------------------------------------------------  
 
-class B extends A1{
+// class B extends A1{
 
-    constructor(i:number,j:number,k:number){
-        super(i,j);  //-- the super keyword to call methods and constructors of the superclass (the parent class) from a subclass (the child class). // Call the constructor of class A with i and j----------------------
+//     constructor(i:number,j:number,k:number){
+//         super(i,j);  //-- the super keyword to call methods and constructors of the superclass (the parent class) from a subclass (the child class). // Call the constructor of class A with i and j----------------------
 
-    }
-    // super(i,j,n){}
+//     }
+//     // super(i,j,n){}
 
-    decrement(){
-        return this.n - 3
-    }
-    inc(){
-        let classA_Inc = super.inc() + 100
-        return classA_Inc
-    }
+//     decrement(){
+//         return this.n - 3
+//     }
+//     inc(){
+//         let classA_Inc = super.inc() + 100
+//         return classA_Inc
+//     }
 
-}
-    let b1 = new B(20,40,0)
+// }
+//     let b1 = new B(20,40,0)
 
-    console.log(b1.decrement())
-    console.log(b1.m)
-    console.log(b1.inc())
+//     console.log(b1.decrement())
+//     console.log(b1.m)
+//     console.log(b1.inc())
 
 
 //// --------------------------------- relation ship father ---> child----------------------------------------
@@ -85,35 +85,35 @@ class B extends A1{
 //     console.log(c1.inc())
 
 
-// //--------------------------------------Abstraction---------------------------------------------
-    abstract class F{
+// // //--------------------------------------Abstraction---------------------------------------------
+//     abstract class F{
 
-        m:number = 4;
-        str:string;
-        constructor(name:string){
-            this.str = name
+//         m:number = 4;
+//         str:string;
+//         constructor(name:string){
+//             this.str = name
 
-        }
-        abstract increment():number; //------------// Abstract method that must be implemented by subclasses------
-    }
-    // let m:number = 10
-    class G extends F{
-        // m:number = 10;
+//         }
+//         abstract increment():number; //------------// Abstract method that must be implemented by subclasses------
+//     }
+//     // let m:number = 10
+//     class G extends F{
+//         // m:number = 10;
         
         
-        constructor(){
-            super('loge')
-            // m = 7
-            // this.m = 10
-        }
+//         constructor(){
+//             super('loge')
+//             // m = 7
+//             // this.m = 10
+//         }
 
-        increment():number {
-            return this.m + 5
-        }
-    }
-    let f1 = new G();
-    console.log(f1.increment())
-    console.log(f1.str)
+//         increment():number {
+//             return this.m + 5
+//         }
+//     }
+//     let f1 = new G();
+//     console.log(f1.increment())
+//     console.log(f1.str)
 
 //    //---------------------------------- Interface----------------------------------------------
 // interface D{
@@ -136,3 +136,68 @@ class B extends A1{
 // let d1 = new E()
 
 // console.log(d1.increment())
+
+//-----------------------------------interface----------------------------
+
+// interface Myinterface{
+//     a:string
+//     b:number
+// }
+
+// class Myclass{
+//     // a!:number -------I can initialize it later  ---> !
+//     a:number = 1
+//     b:number = 2
+//     readonly c:number = 3
+//     constructor(){
+//         // this.a = 1
+//         this.c = 20     // readonly can change in constructor only --------------------
+//     }
+// }
+
+// let o = new Myclass()
+
+// console.log(o.a,o.b,o.c)
+// o.a = 5
+// o.b = 10
+// // o.c = 20    
+// console.log(o.a,o.b,o.c)
+
+
+//------------------get  set ------------to access private variable-----------------
+class Myclass1{
+    // _val!:string
+    protected _val:string = '25'
+    constructor(){
+        this._val = 'loki'
+
+    }
+    get val():string{
+        console.log("get")
+        return this._val
+        
+    }
+    set val(a:string|number){
+        console.log("set")
+        this._val = String(a)
+        
+    }
+    
+}
+
+let o = new Myclass1()
+
+
+console.log(o.val)
+o.val = 50
+console.log(o.val)
+
+// class Myclass2 extends Myclass1{
+//     _str!: string;
+//     constructor(){
+//         super()
+//         this._str = _val
+//     }
+
+// }
+

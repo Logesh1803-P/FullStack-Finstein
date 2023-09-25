@@ -26,8 +26,21 @@ body{
     height: 200px;
     background-color:white;
     border-bottom: 2px solid #c1cfda;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+   
     
-
+}
+.screen-1 input{
+    height: 150px;
+    width: 550px;
+    font-size: 175%;
+    text-align: end;
+    
+}
+input{
+    border: none;
 }
 
 .screen-2{
@@ -54,4 +67,12 @@ button{
 }
 #divide{
     font-size: 250%;
+    background-color:#46494C;
+}
+#btn_zero{
+    width: 280px;
+    border-radius:15%;
+}
+#btn_color{
+    background-color:#46494C;
 }

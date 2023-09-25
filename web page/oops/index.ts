@@ -167,9 +167,10 @@
 //------------------get  set ------------to access private variable-----------------
 class Myclass1{
     // _val!:string
-    protected _val:string = '25'
+    private _val:string = '25'
+    _age!:string;
     constructor(){
-        this._val = 'loki'
+        // this._val = 'loki'
 
     }
     get val():string{
@@ -177,9 +178,15 @@ class Myclass1{
         return this._val
         
     }
+
+    get age():string{
+        return this._age
+    }
+
     set val(a:string|number){
         console.log("set")
         this._val = String(a)
+        this._age  = "${a} + years"
         
     }
     
@@ -188,9 +195,10 @@ class Myclass1{
 let o = new Myclass1()
 
 
-console.log(o.val)
+// console.log(o.val)
 o.val = 50
 console.log(o.val)
+console.log(o.age)
 
 // class Myclass2 extends Myclass1{
 //     _str!: string;

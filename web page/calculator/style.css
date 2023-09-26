@@ -37,10 +37,13 @@ body{
     width: 550px;
     font-size: 175%;
     text-align: end;
+    color: #46494C;
     
 }
 input{
     border: none;
+    outline: none;
+    /* color: #e5cedc; */
 }
 
 .screen-2{

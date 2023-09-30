@@ -11,12 +11,13 @@ body{
 
 .container-1{
     /* margin:60px auto; */
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
     
     max-width: 600px;
     max-height: 800px;
     border: none;
-   border-radius: 50%;
+    border-radius: 15%;
+    
     /* margin: auto auto; */
     
     
@@ -28,7 +29,8 @@ body{
     border-bottom: 2px solid #c1cfda;
     display: flex;
     justify-content: right;
-    align-items: end;
+    align-items: center;
+    border-radius: 15% ;
    
     
 }
@@ -39,11 +41,12 @@ body{
     text-align: end;
     color: #46494C;
     
+    
 }
-input{
+#display{
     border: none;
     outline: none;
-    /* color: #e5cedc; */
+    text-align: end ;
 }
 
 .screen-2{
@@ -68,14 +71,21 @@ button{
     color: white;
     font-weight: lighter;
 }
-#divide{
+button:hover
+{
+   background-color:rgb(0, 0, 0);
+}
+.divide{
     font-size: 250%;
     background-color:#46494C;
 }
-#btn_zero{
+.btn_zero{
     width: 280px;
     border-radius:15%;
 }
-#btn_color{
+.btn_color{
     background-color:#46494C;
+}
+.btn_nocolor:hover{
+    background-color: rgb(184, 22, 22);
 }

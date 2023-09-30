@@ -6,39 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+   
 </head>
 <body>
     
     <div class="container-1">
         <div class="screen-1">
-            <input type="text">
+            <input id="display" type="text">
         </div>
         <div class="screen-2">
-            <button id="btn_color">c</button>
-            <button id="btn_color">+/-</button>
-            <button id="btn_color">%</button>
-            <button id="divide"> ÷</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button id="btn_color">×</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button id="btn_color">–</button>
+            <button class="btn_color" onclick="appendToDisplay('AC')">AC</button>
+            <button class="btn_color" onclick="appendToDisplay('DEL')">DEL</button>
+            <button class="btn_color" onclick="appendToDisplay('%')">%</button>
+            <button class="divide"    onclick="appendToDisplay('/')"> ÷</button>
+            <button class="btn_nocolor"             onclick="appendToDisplay('7')">7</button>
+            <button class="btn_nocolor"               onclick="appendToDisplay('8')">8</button>
+            <button class="btn_nocolor"              onclick="appendToDisplay('9')">9</button>
+            <button class="btn_color" onclick="appendToDisplay('*')">×</button>
+            <button  class="btn_nocolor"              onclick="appendToDisplay('4')">4</button>
+            <button  class="btn_nocolor"              onclick="appendToDisplay('5')">5</button>
+            <button  class="btn_nocolor"              onclick="appendToDisplay('6')">6</button>
+            <button class="btn_color" onclick="appendToDisplay('-')">–</button>
             
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button id="btn_color">+</button>
+            <button   class="btn_nocolor"             onclick="appendToDisplay('1')">1</button>
+            <button  class="btn_nocolor"              onclick="appendToDisplay('2')">2</button>
+            <button  class="btn_nocolor"              onclick="appendToDisplay('3')">3</button>
+            <button class="btn_color" onclick="appendToDisplay('+')">+</button>
             <!-- <button>00</button> -->
-            <button id="btn_zero">0</button>
-            <button>.</button>
-            <button id="btn_color">=</button>
+            <button  class="btn_zero btn_nocolor"  onclick="appendToDisplay('0')">0</button>
+            <button class="btn_nocolor" onclick="appendToDisplay('.')">.</button>
+            <button class="btn_color" onclick="appendToEval()">=</button>
          </div>
             
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>

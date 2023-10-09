@@ -2,6 +2,7 @@
 function prizeFilter(cars,amount){
     var newCars
     newCars = cars.filter(e => e.prize > amount)
+    // newCars = cars.reduce((e,{prize}) => e + prize > amount)
     return newCars
 }
 

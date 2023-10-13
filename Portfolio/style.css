@@ -86,7 +86,7 @@ body{
     transition: all 0.2s;
 }
 .navbar {
-    background: #00000077;
+    background: #ffffff77;
 }
 
 .social{
@@ -364,6 +364,8 @@ body{
     padding:20px; 
     display: flex;
     flex-direction: column;
+    gap: 25px;
+    
 }
 .cards:hover .card-body1 {
     /* right: 0; */
@@ -514,3 +516,28 @@ body{
         margin: 20px 0px
     }
 }
+
+
+/*------------------------------------------------------- footer ----------------------------------------------------------------*/
+.footer{
+    height: 100vh;
+    width: 100vw;
+    background-color: #95e3cc;
+    display: flex;
+    justify-content: center;
+}
+.footer1{
+    height: 30vh;
+    background-color: #313741;
+    width: 80vw;
+}
+.footer2{
+    height: 60vh;
+    background-color: #aeb6c4;
+}
+.footer3{
+    height: 10vh;
+    background-color: #fff;
+}
+
+PC0HK931

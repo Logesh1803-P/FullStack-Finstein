@@ -1,0 +1,102 @@
+
+<!-- <input type="text"  -->
+
+<!-- <input type="text" [(ngModel)]="employee.firstname">
+<input type="text">
+<input type="text">
+<input type="text"> -->
+
+<!-- <button (click)="myfun()">submit</button> -->
+<!-- <button (click)="myfun()">change</button>
+   
+<p *ngIf="show"> hi</p> -->
+<!-- <ul *ngFor="let emp of emps">
+    <li>{{emp}}</li>
+</ul> -->
+
+<!-- <ul *ngFor="let emp of emps;index as i">
+    <li>{{i+1}}{{emp}}</li>
+</ul> -->
+
+<!-- <ul *ngFor="let emp of emps;first as f">
+    <li>{{f}}:{{emp}}</li>
+</ul> -->
+
+<!-- <ul *ngFor="let emp of emps;last as l">
+    <li>{{l}}:{{emp}}</li>
+</ul> -->
+
+<!-- <ul *ngFor="let emp of emps;odd as o">
+    <li>{{o}}:{{emp}}</li>
+</ul> -->
+
+    <!-- <body [style.background]="setcolor">
+
+        <input type="text" name="mytext"  [(ngModel)]="mytext" value="" #mytext/> 
+        {{mytext.value}}
+        
+        <p>{{mytext}}</p>
+
+        <button (click) = "mylog(mytext.value)">submit</button>
+
+    </body> -->
+
+
+<!-- <p *ngIf="show then ifblock else elseblock">
+    hi ddddd
+    <ng-template #elseblock>  hi  ssssss </ng-template>
+</p> -->
+
+<!-- <input type="text" name="mytext" [(ngModel)]="mytext" />
+
+    <button (click)="mylog()">submit</button>
+
+    <p>Value: {{ mytext }}</p> -->
+
+
+<!----------------------------------------------- Binding-------------------------------------->
+
+
+<!-- ------------------------------------------property binding-------------------------------------------- -->
+
+    <input type="text" [value]="mytext">   <!-- it only for input tag -->
+
+
+
+    <!-- ----------------------------------Event binding-------------------------------- -->
+
+    <button (click)="myfun()">submit</button>
+    {{screen}}
+    
+    <!-- --------------------------------------2 way binding------------------------- -->
+    <br>
+    <input type="text" [(ngModel)]="employee.name">
+    
+    <input type="text" [(ngModel)]="employee.age">
+    {{employee | json}}
+
+    <button (click) = "myfun1()">submit1</button>
+    <br>
+
+    <!-- -----------------------------------2 way binding using id ---------------------->
+<div [style.background]="setcolor">
+    <input type="text" name="access" value=""  #access>
+
+    <button (click) = "silly(access.value)">silly</button>
+</div>
+
+
+<!-- ----------------------------------------------ngIf------------------------------------------>
+
+<br>
+<p *ngIf="gaji"> Jeeve </p>
+<p *ngIf="gaji1"> loki</p>
+
+   
+
+
+
+
+
+
+

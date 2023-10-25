@@ -1,0 +1,57 @@
+
+<h1>Form</h1>
+<div class="f1">
+    <form action="">
+        <label for=""> Name:</label>
+           
+            <input type="text" name="Name" #Name>
+        
+        <label for=""> Age:</label>
+        
+            <input type="text" name="Age" #Age>
+        <br>
+        <button (click)="createFun(Name.value,Age.value)">Create</button>
+        <button  (click)="retrieveData()">retrive</button>
+
+    </form>
+
+    <ul >
+        <table>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+            <tr *ngFor="let i of object">
+
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+            </tr>
+            <tr *ngFor="let e of dataObjects">
+                <td>{{e.name}}</td>
+                <td>{{e.age}}</td>
+
+            </tr>
+        </table>
+        
+    </ul>
+
+
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <th>age</th>
+            <th>dept</th>
+
+        </tr>
+        <tr  *ngFor="let s of studentX">
+            <th>{{s.name}}</th>
+            <th>{{s.age}}</th>
+            <th>{{s.department}}</th>
+
+        </tr>
+        
+    </table>
+    
+
+</div>

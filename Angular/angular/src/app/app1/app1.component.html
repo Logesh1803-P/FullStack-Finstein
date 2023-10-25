@@ -89,10 +89,63 @@
 <!-- ----------------------------------------------ngIf------------------------------------------>
 
 <br>
-<p *ngIf="gaji"> Jeeve </p>
-<p *ngIf="gaji1"> loki</p>
+<p *ngIf="status"> Jeeve </p>
+<p *ngIf="status1"> loki</p>
 
-   
+
+<!-- ----------------------------------------------ngFor  index odd even first last-->
+<br>
+   <ul *ngFor="let name of array; even as o">
+
+    <li>{{o}}:{{name}}</li>
+   </ul>
+
+   <!-- ------------------------------------ngIf -> if or else -->
+
+<br>
+   <input type="text" name="change" #change>
+   <button (click)="mycolor(change.value)">change me</button>
+
+    <p *ngIf="show then ifblock else elseblock">
+       
+    </p>
+
+    <ng-template  #ifblock> 
+
+        <div  id="box">
+
+        </div> 
+
+    </ng-template>
+
+    <ng-template #elseblock> 
+
+       <div id="box1">
+
+       </div>
+
+    </ng-template>
+
+    <br>
+    
+
+    <button (click)="click()"> button </button>
+
+    <!-- <button (click)="clickcp()"></button> -->
+    <br>
+
+    <h2>Student</h2>
+    <ul *ngFor="let s of student">
+        <li>{{s.name}}</li>
+    </ul>
+
+    <button (click)="c_p_t()">C_p</button>
+
+
+    <button (click)="tomBtn()">Tom</button>
+    
+    {{toDo | json}}
+
 
 
 

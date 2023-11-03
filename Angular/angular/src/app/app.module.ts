@@ -9,6 +9,9 @@ import { ServiceService } from './service.service';
 import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CRUDComponent } from './crud/crud.component';
+import { StudentComponent } from './student/student.component';
+import { BootstrapComponent } from './bootstrap/bootstrap.component';
+import { MenuModule } from 'primeng/menu';
 
 
 @NgModule({
@@ -16,13 +19,16 @@ import { CRUDComponent } from './crud/crud.component';
     AppComponent,
     App1Component,
     FormComponent,
-    CRUDComponent
+    CRUDComponent,
+    StudentComponent,
+    BootstrapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MenuModule 
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

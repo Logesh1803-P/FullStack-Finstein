@@ -7,13 +7,16 @@
         
         <form>
             <h1>Form</h1>
+            <h3>Name</h3>
             <div class="input-group flex-wrap">
+                
                 <input type="text" name="Name" id="Name" [(ngModel)]="name" class="form-control" placeholder="name" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
-    
+            <h3>Age</h3>
             <div class="input-group mb-3">
+
                 <input type="text" name="Age"  id="Age" [(ngModel)]="age" class="form-control" placeholder="Age" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary"  type="button" id="button-addon2"  (click)="createData()">Create</button>
+                <button class="btn btn-outline-success"  type="button" id="button-addon2"  (click)="createData()">Create</button>
             </div>
         </form>
 
@@ -41,15 +44,15 @@
   
      <div class="table">
         <h1>Table</h1>
-         <table class="table table-hover" >
+         <table class="table" >
             
 
-            <thead class="table-dark">
-                <tr>
+            <thead class="table-primary">
+               
                     <th>Name</th>
                     <th>Age</th>
                     <th>Action</th>
-                </tr>
+                
             </thead>
             <tbody>
                 <tr *ngFor="let item of dataObj; let i = index">
@@ -64,10 +67,10 @@
                 
                     <td>
                         <!-- <button (click)="updateData(i, item)">Update</button> -->
-                        <button class="btn btn-outline-secondary buttonUpdate" type="button" (click)="updateData(i, item)">Update</button>
+                        <button class="btn btn-outline-primary buttonUpdate" type="button" (click)="updateData(i, item)">Update</button>
 
                         <!-- <button (click)="deleteData(i)">Delete</button> -->
-                        <button class="btn btn-outline-secondary" type="button" (click)="deleteData(i)">Delete</button>
+                        <button class="btn btn-outline-danger " type="button" (click)="deleteData(i)">Delete</button>
 
                     </td>
                 </tr>

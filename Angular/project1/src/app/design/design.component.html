@@ -1,0 +1,58 @@
+<!-- 
+<div class="card">
+    <p-menubar [model]="items">
+        <ng-template pTemplate="start">
+            <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
+        </ng-template>
+        <ng-template pTemplate="end">
+            <input type="text" pInputText placeholder="Search" class="w-full" />
+        </ng-template>
+    </p-menubar>
+</div>
+
+
+<p-button label="Primary" [text]="true" [raised]="true"></p-button>
+<p-button label="Secondary" [text]="true" [raised]="true" severity="secondary"></p-button>
+<p-button label="Success" [text]="true" [raised]="true" severity="success"></p-button>
+<p-button label="Info" [text]="true" [raised]="true" severity="info"></p-button>
+<p-button label="Warning" [text]="true" [raised]="true" severity="warning"></p-button>
+<p-button label="Help" [text]="true" [raised]="true" severity="help"></p-button>
+<p-button label="Danger" [text]="true" [raised]="true" severity="danger"></p-button>
+<p-button label="Plain" [text]="true" [raised]="true" [plain]="true"></p-button>
+
+
+<p-button icon="pi pi-check" [rounded]="true" [text]="true" [raised]="true"></p-button>
+<p-button icon="pi pi-bookmark" [rounded]="true" [text]="true" [raised]="true" severity="secondary "></p-button>
+<p-button icon="pi pi-search" [rounded]="true" [text]="true" [raised]="true" severity="success "></p-button>
+<p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info "></p-button>
+<p-button icon="pi pi-bell" [rounded]="true" [text]="true" [raised]="true" severity="warning "></p-button>
+<p-button icon="pi pi-heart" [rounded]="true" [text]="true" [raised]="true" severity="help "></p-button>
+<p-button icon="pi pi-times" [rounded]="true" [text]="true" [raised]="true" severity="danger "></p-button>
+
+
+
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items"></p-splitButton>
+
+
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items"></p-splitButton>
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items" styleClass="p-button-secondary mb-2"></p-splitButton>
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('success')" [model]="items" styleClass="p-button-success mb-2"></p-splitButton>
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items" styleClass="p-button-info mb-2"></p-splitButton>
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('warn')" [model]="items" styleClass="p-button-warning mb-2"></p-splitButton>
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items" styleClass="p-button-help mb-2"></p-splitButton>
+<p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('error')" [model]="items" styleClass="p-button-danger mb-2"></p-splitButton> -->
+
+<!-- <p-splitButton label="Save" icon="pi pi-plus" (onClick)="save('info')" [model]="items"></p-splitButton> -->
+
+<div class="card">
+    <div class="flex flex-wrap gap-3 mb-5">
+        <p-radioButton *ngFor="let option of positionOptions" [name]="option.label" [value]="option.value" [label]="option.label" [(ngModel)]="position" [inputId]="label"></p-radioButton>
+    </div>
+    <div class="dock-window">
+        <p-dock [model]="items" [position]="position">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.icon" [alt]="item.label" width="100%" />
+            </ng-template>
+        </p-dock>
+    </div>
+</div>

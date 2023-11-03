@@ -1,0 +1,39 @@
+// .input-group1{
+//     width: 20%;
+//     margin-left: 40%;
+//     margin-top: 10%;
+//     border: 1px solid black;
+// }
+.box{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    border: 1px solid rgb(220, 220, 220);
+    padding: 2%;
+    border-radius: 20px;
+    background-color: #f5f2f0
+}
+#gender{
+    padding-right: 30px;
+}
+#o-div{
+    padding-bottom: 40px;
+    position: relative;
+}
+#i-div{
+    position:absolute;
+    padding-top: 10px;  
+}
+
+#o-div label {
+   
+    padding-bottom: 20px;
+    font-size: 25px;
+    
+}
+#Gender label{
+    font-size: 25px;
+}
+button{
+    width: 100%;
+}

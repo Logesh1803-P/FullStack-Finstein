@@ -1,0 +1,12 @@
+.app {
+  height: 200px;
+  background-color: red;
+}
+.app .p {
+  color: azure;
+  font-size: medium;
+}
+.app p {
+  color: green;
+  font-size: 100px;
+}/*# sourceMappingURL=style.css.map */

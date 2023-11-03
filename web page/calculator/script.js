@@ -1,15 +1,18 @@
 const display=document.getElementById("display")
-function appendToDisplay(char)
-{
-    
-    if(char == "AC")
-        display.value =" ";
-    else
-
-      display.value += char;
-
-
+function appendToDisplay(char) {
+  if (char === "AC") {
+    // Clear the display
+    display.value = "";
+  } else if (char === "DEL") {
+    // Delete the last character
+    const currentValue = display.value;
+    display.value = currentValue.slice(0, -1);
+  } else {
+    // Append the character to the display
+    display.value += char;
+  }
 }
+
 
 // function  appendToEval(){
 //     const getValue = document.getElementById("display").value

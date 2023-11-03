@@ -12,8 +12,8 @@ body{
     /* font-family: 'Roboto', Arial, sans-serif; */
     font-family: 'Lato', Arial, sans-serif;
    
-
     /* font-family: 'Georgia', serif; */
+  
 }
 /* #top{
     display: flex;
@@ -49,6 +49,7 @@ body{
     background-color: rgb(255, 255, 255);
     margin: 6px 0px;
 } */
+
 /* -------------------------------------------------bootstrp -----------------------------------*/
 
 .navbar-collapse{
@@ -106,6 +107,11 @@ body{
 }
 .social i{
     border: none !important;
+}
+#anc{
+    /* text-decoration: none !important; */
+    border-bottom: none;
+    color: #151414;
 }
 
 
@@ -226,6 +232,7 @@ body{
     
     font-size: 80px;
     font-weight: 900;
+    color: white;
 }
 .about-left p{
     
@@ -233,34 +240,33 @@ body{
     justify-content: flex-end; */
     padding-left: 50%;
     font-size: 22px;
+    color: white;
 }
 .about-left button{
     
     /* display: flex;
     justify-content: flex-end; */
-    background-color: red;
-    color: white;
     border: none;
     font-size: 22px;
-    height: 60px;
-    width: 120px;
+    /* height: 60px;
+    width: 120px; */
 
 }
 .about-right{
+
    width: 50%;
    height: 100vh;
    align-items: center;
     display: flex;
     padding-left: 5%;
 
-
-
 }
+
 .image{
     /* background: #00d7bb ; */
     width: 40%;
     height: 40%;
-    border: 7px solid rgb(0, 0, 0);
+    /* border: 7px solid rgb(0, 0, 0); */
     border-radius: 11%;
     position: relative;
     /* box-shadow: inset 0 -3em 3em rgba(0, 200, 0, 0.3),
@@ -270,6 +276,7 @@ body{
     
 }
 .image img{
+
     object-fit: cover;
     position: absolute;
     width: 100%;
@@ -277,7 +284,6 @@ body{
     border-radius: 10%;
     filter: drop-shadow(50px 20px 50px rgba(255, 0, 0, 0.507));
 
-   
 }
 
 
@@ -401,7 +407,7 @@ body{
 .card-body1,.card-body2,.card-body3{
     height: 100%;
     width: 100%;
-    background: #ffffffbe;
+    background: #c6ebea;
     
     position:absolute;
     /* top: 0;
@@ -588,6 +594,9 @@ body{
     line-height: 28px;
     
 }
+#f-2{
+    padding-left: 10%;
+}
 .footer label{
     font-size: 20px;
     font-family: "Telefon Black", sans-serif !important;
@@ -618,7 +627,7 @@ body{
     justify-content:center !important;
     align-items: center !important;
     flex-wrap: wrap;
-    padding-top: 10%;  
+    padding-top: 5%;  
 }
 
 .footer2 div{
@@ -633,8 +642,9 @@ body{
     
 }
 
+
 .footer2-card2 h5,.footer2-card3 h5,.footer2-card1 h5{
-    width: 51% !important;
+    width: 70% !important;
     border-bottom: 2px solid red; 
     padding-bottom: 20px;  
 }
@@ -651,6 +661,9 @@ body{
     /*---- or------- */
     flex-grow: 1;
     flex-basis: 50%;   
+}
+.footer2-card2 {
+    padding-left: 7%;
 }
 
 .footer3{
@@ -741,4 +754,7 @@ body{
     font-size: 15px !important;
     text-decoration: none;
     color: #ff0000;
+}
+#koko p{
+    padding-top: 20px;
 }

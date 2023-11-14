@@ -1,0 +1,270 @@
+
+<div  class="container" [formGroup]="userForm" >
+
+    <div class="o-div" >
+
+        <label for="" class="form-check-label">First name:</label>
+        <input 
+        type="text" 
+        class="form-control" 
+        name="name" 
+        formControlName='name'
+        maxlength="25"
+        minlength="2"
+        [class.is-invalid]="(form['name'].touched && form['name'].invalid)|| 
+         (form['name'].dirty && form['name'].invalid) || (show && form['name'].invalid)"
+        
+         >
+         {{form['name'].value}}
+
+         <div *ngIf="(form['name'].touched && form['name'].invalid) || (form['name'].invalid && show) || (form['name'].dirty && form['name'].invalid)" class="text-danger">
+            
+            <span 
+            [class.d-none]="!form['name'].errors?.['required']" 
+             class="text-danger">
+            Name is required.
+            </span>
+            <span 
+            [class.d-none]="!form['name'].errors?.['minlength']" 
+             class="text-danger">
+            min length is 2.
+            </span>
+
+         </div>
+        
+    
+    </div>
+
+    <div class="o-div" >
+
+        <label for="" class="form-check-label">DOB:</label>
+        <input 
+        type="date" 
+        class="form-control" 
+        name="date" 
+        formControlName='date'
+       
+        
+        [class.is-invalid]="(form['date'].touched && form['date'].invalid)|| 
+         (form['date'].dirty && form['date'].invalid) || (show && form['date'].invalid)"
+        
+         >
+         
+
+         <div *ngIf="(form['date'].touched && form['date'].invalid) || (form['date'].invalid && show) || (form['date'].dirty && form['date'].invalid)" class="text-danger">
+            
+            <span 
+            [class.d-none]="!form['date'].errors?.['required']" 
+             class="text-danger">
+            Date is required.
+            </span>
+        
+
+         </div>
+        
+    
+    </div>
+    
+    <div class="o-div">
+        <label for="" class="form-check-label">Email:</label>
+        <input 
+        type="text" 
+        class="form-control"   
+        
+        formControlName="email"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        
+        [class.is-invalid]="form['email'].touched && form['email'].invalid || (show && form['email'].invalid) ||  (form['email'].dirty && form['email'].invalid)"
+       
+
+        >
+        <div *ngIf="form['email'].touched && form['email'].invalid || 
+        (show && form['email'].invalid) ||  
+        (form['email'].dirty && form['email'].invalid)" class="text-danger">
+            
+            <span 
+            [class.d-none]="!form['email'].errors?.['required']" 
+             class="text-danger">
+             Email is required.
+            </span>
+
+            <span 
+            [class.d-none]="!form['email'].errors?.['pattern']" 
+             class="text-danger">
+             Email is not valid.
+            </span>
+            
+        </div>
+
+    
+    </div>
+
+    <div class="o-div">
+
+        <label for="" class="form-check-label">Mobile:</label>
+        <input 
+        type="number" 
+        class="form-control"  
+        name="mobilenumber" 
+        formControlName="mobile"
+        maxlength="10"     
+        pattern="\d{10}"
+        
+        onkeypress="if(this.value.length==10) return false;"
+        [class.is-invalid]="(form['mobile'].touched && form['mobile'].invalid) || (form['mobile'].dirty && form['mobile'].invalid) ||  (show && form['mobile'].invalid)"
+ 
+        >
+
+        <div *ngIf="(form['mobile'].touched && form['mobile'].invalid) || (form['mobile'].dirty && form['mobile'].invalid) ||  (show && form['mobile'].invalid)" class="text-danger">
+            
+            <span 
+            [class.d-none]="!form['mobile'].errors?.['required']" 
+             class="text-danger">
+             Mobile number is required.
+            </span>
+            <span 
+            [class.d-none]="!form['mobile'].errors?.['pattern']" 
+             class="text-danger">
+             Enter 10 digit number.
+            </span>
+            
+        </div>
+
+    </div>
+
+    <div class="o-div">
+      
+        <label for="">Country:</label>
+        <select 
+        class="form-select" 
+        aria-label="Default select example" 
+        [class.is-invalid]="(form['country'].touched && form['country'].invalid) ||  (show && form['country'].invalid)"
+        formControlName="country"
+
+        >
+            <option value="India">India</option>
+            <option value="America">America</option>
+            <option value="China">China</option>
+        </select>
+
+        <div  *ngIf="(form['country'].touched && form['country'].invalid) || (show && form['country'].invalid)"  class="text-danger">
+            Country name is required
+        </div>
+  
+    </div>
+
+
+    <div class="col-12 gender " >
+        <label>Gender:</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" formControlName="gender"
+            value="Male" [class.is-invalid]="form['gender'].touched && form['gender'].invalid ||form['gender'].invalid && show">
+
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" formControlName="gender" 
+            value="Female" [class.is-invalid]="form['gender'].touched && form['gender'].invalid ||form['gender'].invalid && show">
+
+            <label class="form-check-label" for="inlineRadio2">Female</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" formControlName="gender"
+            value="Others" [class.is-invalid]="form['gender'].touched && form['gender'].invalid ||form['gender'].invalid && show">
+
+            <label class="form-check-label" for="inlineRadio3">Others</label>
+        </div>
+
+        <div class="gender-idiv" *ngIf="(form['gender'].touched && form['gender'].invalid) ||form['gender'].invalid && show" 
+        class="text-danger">Gender is required
+        </div>
+
+    </div> 
+
+
+
+    
+
+    <div class="col-12 hobbies" >
+    <label>Hobbies:</label>
+    <div class="form-check form-check-inline">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" formControlName="cricket"
+                value="Cricket" [class.is-invalid]="form['cricket'].touched && form['cricket'].invalid">
+            <label class="form-check-label" for="inlineCheckbox1">Cricket</label>
+        </div>
+    </div>
+
+    <div class="form-check form-check-inline">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" formControlName="music"
+                value="Music" [class.is-invalid]="form['music'].touched && form['music'].invalid">
+            <label class="form-check-label" for="inlineCheckbox2">Music</label>
+        </div>
+    </div>
+
+    <div class="form-check form-check-inline">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="hobbies" formControlName="dance"
+                value="Dance" [class.is-invalid]="form['dance'].touched && form['dance'].invalid">
+            <label class="form-check-label" for="inlineCheckbox3">Dance</label>
+        </div>
+    </div>
+
+    <div class="hobbies-idiv" *ngIf="(form['cricket'].touched && form['cricket'].invalid) && 
+                                   (form['music'].touched && form['music'].invalid) && 
+                                   (form['dance'].touched && form['dance'].invalid)" class="text-danger">Select at least one hobby
+    </div>
+</div>
+<!-- <form [formGroup]="hobbiesForm">
+    <label>
+      <input type="checkbox" formControlName="reading"> Reading
+    </label>
+    <label>
+      <input type="checkbox" formControlName="gaming"> Gaming
+    </label>
+    <label>
+      <input type="checkbox" formControlName="traveling"> Traveling
+    </label>
+</form> -->
+
+<div formGroupName="address">
+<h4>Address</h4>
+    <div class="o-div">
+        <label for="">Doorno</label>
+        <input class="form-control" 
+        name="door" 
+        type="text"
+        formControlName="DoorNum"
+        [class.is-invalid]="form['address.DoorNum'].touched && form['address.DoorNum'].invalid">
+
+        <div *ngIf="form['address.DoorNum'].touched && form['address.DoorNum'].invalid" class="text-danger">
+            required
+        </div>
+
+
+    </div>
+
+    <!-- <div class="formGroup" class="o-div">
+        <label for="">street</label>
+        <input class="form-control" type="text" formControlName="streetName">
+
+    </div>
+    <div class="formGroup" class="o-div">
+        <label for="">state</label>
+        <input class="form-control" type="text" formControlName="state">
+
+    </div> -->
+</div>
+    
+
+
+    <div class="button">
+     <button class="btn btn-primary"(click)="myfun()">Click me</button>
+
+    </div>   
+</div>
+
+  

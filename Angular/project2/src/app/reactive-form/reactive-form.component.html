@@ -238,16 +238,16 @@
         name="door" 
         type="text"
         formControlName="DoorNum"
-        [class.is-invalid]="form['address.DoorNum'].touched && form['address.DoorNum'].invalid">
+        [class.is-invalid]="">
 
-        <div *ngIf="form['address.DoorNum'].touched && form['address.DoorNum'].invalid" class="text-danger">
+        <div *ngIf="address?.get('DoorNum')?.touched && address?.get('DoorNum')?.invalid" class="text-danger">
             required
         </div>
 
 
     </div>
 
-    <!-- <div class="formGroup" class="o-div">
+    <div class="formGroup" class="o-div">
         <label for="">street</label>
         <input class="form-control" type="text" formControlName="streetName">
 
@@ -256,7 +256,7 @@
         <label for="">state</label>
         <input class="form-control" type="text" formControlName="state">
 
-    </div> -->
+    </div>
 </div>
     
 
@@ -266,5 +266,8 @@
 
     </div>   
 </div>
+
+
+
 
   

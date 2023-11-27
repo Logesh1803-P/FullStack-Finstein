@@ -1,0 +1,113 @@
+
+
+<div class="container">
+    
+
+    <label for="">First Name:</label> 
+        <input type="text" 
+        class="form-control" 
+        [(ngModel)]="s.firstname" 
+       
+        aria-label="Recipient's username with two button addons">
+        <label for="">Lastname</label>
+        <input type="text" 
+        class="form-control"
+         [(ngModel)]="s.lastname" 
+         aria-label="Recipient's username with two button addons">
+         <label for="">phoneNumber</label>
+        <input type="text" 
+        class="form-control"
+         [(ngModel)]="s.phoneNumber" 
+         aria-label="Recipient's username with two button addons">
+         <label for="">Dept</label>
+        <input type="text" 
+        class="form-control" 
+        [(ngModel)]="s.dept" 
+        aria-label="Recipient's username with two button addons">
+        <label for="">Gender</label>
+        <input type="text" 
+        class="form-control"
+         [(ngModel)]="s.gender" 
+         aria-label="Recipient's username with two button addons">
+         <label for="">T&C:</label>
+        <input type="text" 
+        class="form-control"
+         [(ngModel)]="s.termsAndCondition" 
+         aria-label="Recipient's username with two button addons">
+    
+
+ 
+  <button class="btn btn-outline-danger" (click)="create()">Create</button>
+
+</div>
+        
+
+<table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">P.no</th>
+        <th scope="col">Depatment</th>
+        <th scope="col">Gender</th>
+        <th scope="col">T&C</th>
+        <th scope="col">Change</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of student" >
+        
+            <input type="hidden" 
+            class="form-control" 
+            [(ngModel)]="s.id" 
+            >
+        
+
+        <td>  
+            <input type="text" 
+            class="form-control" 
+            [(ngModel)]="s.firstname" 
+            aria-label="Recipient's username with two button addons">
+        </td>
+        <td>
+            <input type="text" 
+            class="form-control"
+             [(ngModel)]="s.lastname" 
+             aria-label="Recipient's username with two button addons">
+        </td>
+        <td>
+            <input type="text" 
+            class="form-control"
+             [(ngModel)]="s.phoneNumber" 
+             aria-label="Recipient's username with two button addons">
+        </td>
+        <td>
+            <input type="text" 
+            class="form-control" 
+            [(ngModel)]="s.dept" 
+            aria-label="Recipient's username with two button addons">
+        </td>
+        <td>
+            <input type="text" 
+            class="form-control"
+             [(ngModel)]="s.gender" 
+             aria-label="Recipient's username with two button addons">
+        </td>
+        <td>
+            <input type="text" 
+            class="form-control"
+             [(ngModel)]="s.termsAndCondition" 
+             aria-label="Recipient's username with two button addons">
+        </td>
+        
+        <button class="btn btn-primary" (click)="Update()">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+
+      </tr>
+     
+    </tbody>
+  </table>
+
+  

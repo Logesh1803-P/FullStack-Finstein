@@ -38,9 +38,9 @@ export class ReactiveFormComponent {
       music: [null,[Validators.required]],
       dance: [null,[Validators.required]],
       address: this.fb.group({
-       DoorNum: ['',[Validators.required]]
-      //  streetName:['',[Validators.required]],
-      //  state:['',[Validators.required]]
+       DoorNum: ['',[Validators.required]],
+       streetName:['',[Validators.required]],
+       state:['',[Validators.required]]
       })
       
       // hobbies: this.fb.array([])
@@ -64,6 +64,10 @@ export class ReactiveFormComponent {
   
   get form(){
     return this.userForm.controls;
+  }
+
+  get address() {
+    return this.userForm.get('address');
   }
 
 

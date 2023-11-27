@@ -1,0 +1,397 @@
+<div class="top-container">
+    <div class="top-container1">
+        <div class="top-container1-1">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="top-container1-2">
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="header">
+
+        <div class="header1"> 
+            <img src= "../../assets/Ecpence (1).jpg" alt="exp">
+        </div>
+    
+        <div class="header2">
+            <div class="card flex justify-content-center">
+                <p-button  #addButton label="Add Expenses" icon="pi pi-plus" (click)="resetForm(); createUsers()"></p-button>
+            </div>
+        
+    
+        </div>
+       
+    </div>
+</div>
+<!-- 
+<div *ngFor="let item of details">
+    <p> {{item.name}}</p>
+</div> -->
+
+<!-- <div class="big">
+
+    <table class="table t1">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Amount</th>
+            <th scope="col">description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of details">
+            <td scope="row" >{{item.name}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.Amount}}</td>
+            <td>{{item.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div> -->
+
+<!-- <div class="card">
+    <p-table [value]="details" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                
+                <th>Name</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Description</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.Amount}}</td>
+                <td>{{product.description}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div> -->
+ 
+
+<!-- <div class="card">
+    <p-table [value]="details" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name" style="width:20%">Name  <p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="category" style="width:20%">Category <p-sortIcon field="category"></p-sortIcon></th>
+                <th pSortableColumn="Amount" style="width:20%">Amount<p-sortIcon field="Amount"></p-sortIcon></th>
+                <th pSortableColumn="description" style="width:20%">Description<p-sortIcon field="description"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.Amount}}</td>
+                <td>{{product.description}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div> -->
+
+<!-- <div class="card">
+    <p-table [value]="details" [tableStyle]="{'min-width': '60rem', 'overflow-x': 'auto', 'overflow-y': 'auto'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name" style="width:20%">Name  <p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="category" style="width:20%">Category <p-sortIcon field="category"></p-sortIcon></th>
+                <th pSortableColumn="Amount" style="width:20%">Amount<p-sortIcon field="Amount"></p-sortIcon></th>
+                <th pSortableColumn="description" style="width:20%">Description<p-sortIcon field="description"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.Amount}}</td>
+                <td>{{product.description}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div> -->
+
+
+<div class="card">
+    <p-table [value]="details" [scrollable]="true" [scrollHeight]="'500px'" [paginator]="true" [rows]="5" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name" style="width:15%">Name  <p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="category" style="width:15%">Category <p-sortIcon field="category"></p-sortIcon></th>
+                <th pSortableColumn="Amount" style="width:15%">Amount<p-sortIcon field="Amount"></p-sortIcon></th>
+                <th pSortableColumn="description" style="width:15%">Description<p-sortIcon field="description"></p-sortIcon></th>
+                <th pSortableColumn="date" style="width:15%">Date<p-sortIcon field="date"></p-sortIcon></th>
+
+                <th pSortableColumn="edit" style="width:15%">Edit<p-sortIcon field="edit"></p-sortIcon></th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.Amount}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.date | date}}</td>
+                <td>
+                    <!-- Edit Button -->
+                    <!-- <button (click)="editProduct(product)">Edit</button> -->
+                    <p-button label="Edit" severity="warning" (click)="editUser(product.id)"></p-button>
+                    
+                    <!-- Delete Button -->
+                    <!-- <button (click)="deleteProduct(product)">Delete</button> -->
+                    <p-button label="Delete" severity="danger" (click)="deleteUser(product.id)"></p-button>
+
+
+                    <!-- <p-button label="View" severity="danger" (click)="getUserById(product.id)"></p-button> -->
+
+                </td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <!-- <div class="view">
+        <li *ngIf="let i of Expences">
+           <p> {{i}}</p>
+        </li>
+    </div> -->
+
+</div>
+
+
+<p-sidebar [(visible)]="sidebarVisible" [style]="{width:'550px'}">
+    <ng-template pTemplate="header">Add Your Expense Here!</ng-template>
+    <ng-template pTemplate="content">
+
+        <div class="form0">
+
+            <form [formGroup]="userForm" class="p-mb-3 form1">
+        
+                <div class="p-grid p-fluid div1">
+                  
+        
+                  <div class="p-col-12 p-md-6 gap">
+        
+                    <label class="label" for="name">Name</label>
+                    <input type="text" 
+                    id="name" 
+                    pInputText        
+                    maxlength="25"
+                    minlength="2"
+                    formControlName="name"
+                    class="p-inputtext"  
+
+                    
+
+                    
+                    >
+                    <div *ngIf="form['name'].touched && form['name'].invalid" class="p-error abs">
+        
+                      <span class="p-error-text" *ngIf="form['name'].errors?.['required'] ">Name is required.</span>
+                      <span class="p-error-text" *ngIf="form['name'].errors?.['minlength'] ">Min length is 2.</span>
+                      
+                    </div>
+                    
+                   
+                  </div>
+        
+        
+                
+        
+                  
+                  <!-- <div class="o-div">
+                    <label for="category">Category:</label>
+                    <p-dropdown 
+                    [options]="[{label: 'Option 1', value: 'option1'}, {label: 'Option 2', value: 'option2'}]"
+                      optionLabel="label" 
+                      placeholder="Select a Category" 
+                      formControlName="category">
+                    </p-dropdown>
+                  
+                    <div *ngIf="(form['category'].touched && form['category'].invalid) || (show && form['category'].invalid)" class="text-danger">
+                      Category name is required
+                    </div>
+                  </div> -->
+        
+                  <div class="o-div gap">
+        
+                    <label class="label" for="category">Category:</label>
+                    <!-- <p-dropdown 
+                      [options]="categories" 
+                      
+                      optionLabel="label"
+                      optionValue="Category" 
+                      placeholder="Select a Category" 
+                      [ngClass]="{'is-invalid': (form['category'].touched && form['category'].invalid) || (show && form['category'].invalid)}"              
+                      formControlName="category"
+                      value=""
+                    >
+                    </p-dropdown> -->
+                    <input 
+                          type="text"
+                          [ngClass]="{'is-invalid': (form['category'].touched && form['category'].invalid) || (show && form['category'].invalid)}"              
+                          formControlName="category"
+                          placeholder="Enter your Category"
+                          pInputText 
+                      />
+        
+                    <div *ngIf="form['category'].touched && form['category'].invalid" class="p-error cat">
+        
+                      <span class="p-error-text" *ngIf="form['category'].errors?.['required'] ">category is required.</span>
+                      
+                      
+                    </div>
+                  
+                    
+                  </div>
+                  
+                  
+        
+        
+                
+                  
+                  
+        
+        
+                  <div class="p-col-12 p-md-6 gap">
+        
+                    <label class="label" for="Amount">Amount</label>
+                    <!-- <input type="number" id="Amount" pInputNumber formControlName="Amount"> -->
+                   
+                    <p-inputNumber 
+                    inputId="integeronly"  
+                    formControlName="Amount"
+                    
+                   >
+                  </p-inputNumber>
+        
+        
+                    <div *ngIf="form['Amount'].touched && form['Amount'].invalid" class="p-error abs">
+        
+                      <span class="p-error-text" *ngIf="form['Amount'].errors?.['required'] ">Amount is required.</span>
+                      
+                      
+                    </div>
+                  </div>
+        
+        
+                  <div class="p-col-12 p-md-6 gap main-container">
+                    <label class="label" for="date">Date</label>
+                    <p-calendar formControlName="date"
+                    id="date" 
+                    [showIcon]="true"
+                    [ngClass]="{'is-invalid': (form['date'].touched && form['date'].invalid) || (show && form['date'].invalid) || (form['date'].dirty && form['date'].invalid)}"
+                    >
+
+                    </p-calendar>
+                    
+
+                    <!-- <input type="date" id="date" pInputText 
+                    formControlName="date"
+                   
+                   
+                    > -->
+                    <div *ngIf="form['date'].touched && form['date'].invalid" class="p-error abs">
+        
+                      <span class="p-error-text" *ngIf="form['date'].errors?.['required'] ">Date is required.</span>
+                      
+                      
+                    </div>
+                  </div>
+        
+        
+                  <div class="p-col-12 gap_d">
+                    <label class="label" for="description">Description</label>
+        
+                    <textarea id="description" 
+                    pInputTextarea 
+                    formControlName="description"
+                    [ngClass]="{'is-invalid': (form['description'].touched && form['description'].invalid) || (show && form['description'].invalid) || (form['description'].dirty && form['description'].invalid)}"
+                   
+                    >
+        
+                    </textarea>
+                    <div *ngIf="form['description'].touched && form['description'].invalid" class="p-error abs_d">
+        
+                      <span class="p-error-text" *ngIf="form['description'].errors?.['required'] ">Description is required.</span>
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="formButton">
+
+                    <div class="q">
+                      <button type="submit" pButton  class="p-mt-2 " (click)="cancelButton()">Cancel</button> 
+
+                      <button type="submit" *ngIf="ButtonShow" pButton  class="p-mt-2 " (click)="submit()">submit</button>
+                      
+                      <button type="submit" *ngIf="!ButtonShow" pButton  class="p-mt-2 " (click)="update(userForm.value)">Update</button>
+                      
+                      
+
+                    </div>
+                    
+                  </div> 
+                </div>
+                       
+              </form>
+              
+               
+        </div>
+       
+        
+    </ng-template>
+    <ng-template pTemplate="footer">
+
+      
+    </ng-template>
+  </p-sidebar>
+
+  <p-toast position="top-center"></p-toast>   
+
+
+<p-dialog header="Header" [(visible)]="Dvisible"  position="center"  [modal]='true'[style]="{width:'460px'}">
+<!-- <p-dialog header="Header" [(visible)]="ToastUpdate"  position="center"  [modal]='true'[style]="{width:'460px'}"> -->
+
+
+  <p>
+Are You Want To Sure.Submit  </p>
+<p-button label="No"  (onClick)="Noconformation()"></p-button>
+  <p-button label="Yes"  (onClick)="YesConformation()"></p-button>
+ 
+
+</p-dialog>
+
+<p-dialog header="Header" [(visible)]="DialogUpdate"  position="center"  [modal]='true'[style]="{width:'460px'}">
+  
+  
+    <p>
+  Are You Want To Sure.Submit  </p>
+  <p-button label="No"  (onClick)="NoconformationUpdate()"></p-button>
+    <p-button label="Yes"  (onClick)="YesConformationUpdate()"></p-button>
+    
+  
+  </p-dialog>
+
+
+  <p-dialog header="Header" [(visible)]="DialogDelete"  position="center"  [modal]='true'[style]="{width:'460px'}">
+  
+  
+    <p>
+  Are You Want To Sure.Submit  </p>
+  <p-button label="No"  (onClick)="NoConformationDelete()"></p-button>
+    <p-button label="Yes"  (onClick)="YesConformationDelete()"></p-button>
+   
+  
+  </p-dialog>

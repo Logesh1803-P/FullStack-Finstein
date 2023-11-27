@@ -1,0 +1,208 @@
+<!-- <form [formGroup]="personalDetailsForm" class="p-form">
+  <div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-6 gap">
+      <input pInputText id="name" formControlName="name" placeholder="Name" />
+    </div>
+    <div class="p-col-12 p-md-6 gap">
+      <input pInputText id="email" formControlName="email" placeholder="Email Address" />
+    </div>
+    <div class="p-col-12 p-md-6 gap">
+      <input pInputText id="phoneNumber" formControlName="phoneNumber" placeholder="Phone Number" />
+    </div>
+    <div class="p-col-12 p-md-6 gap">
+      <p-calendar id="dateOfBirth" formControlName="dateOfBirth" placeholder="Date of Birth"></p-calendar>
+    </div>
+    <div class="p-col-12 p-md-6 gap">
+      <input pInputText id="address" formControlName="address" placeholder="Address" />
+    </div>
+    <div class="p-col-12 p-md-6 gap">
+      <p-dropdown id="city" formControlName="city" [options]="cityOptions" placeholder="City"></p-dropdown>
+    </div>
+    <div class="p-col-12 p-md-6 gap">
+      <p-dropdown id="state" formControlName="state" [options]="stateOptions" placeholder="State"></p-dropdown>
+    </div>
+    <div class="p-col-12 p-md-6 gap">
+      <p-dropdown id="country" formControlName="country" [options]="countryOptions" placeholder="Country"></p-dropdown>
+    </div>
+    <div class="p-col-12 p-md-12 gap">
+      <button pButton type="submit" label="Save"></button>
+    </div>
+  </div>
+</form> -->
+
+
+<!-- <form [formGroup]="personalDetailsForm" class="personal-details-form">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" placeholder="Enter your name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" formControlName="email" placeholder="Enter your email address">
+  </div>
+  <div class="form-group">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" formControlName="phoneNumber" placeholder="Enter your phone number">
+  </div>
+  <div class="form-group">
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" id="dateOfBirth" formControlName="dateOfBirth">
+  </div>
+  <div class="form-group">
+    <label for="address">Address:</label>
+    <textarea id="address" formControlName="address" placeholder="Enter your address"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="city">City:</label>
+    <select id="city" formControlName="city">
+      <option value="">Select a city</option>
+      <option value="New York">New York</option>
+      <option value="Los Angeles">Los Angeles</option>
+      <option value="Chicago">Chicago</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="state">State:</label>
+    <select id="state" formControlName="state">
+      <option value="">Select a state</option>
+      <option value="California">California</option>
+      <option value="Texas">Texas</option>
+      <option value="Florida">Florida</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="country">Country:</label>
+    <select id="country" formControlName="country">
+      <option value="">Select a country</option>
+      <option value="United States">United States</option>
+      <option value="Canada">Canada</option>
+      <option value="Mexico">Mexico</option>
+    </select>
+  </div>
+  <button type="submit" class="submit-button">Save</button>
+</form> -->
+
+
+<!-- YourComponent.component.html -->
+
+<div class="parent">
+
+  <div  class="top">
+  
+    <div class="top1">
+  
+      <p> Personal Details</p>
+  
+    </div>
+  
+    <div id="personalDetailsForm" >
+    
+      <form [formGroup]="personalDetailsForm" >
+        
+        <div class="p-grid p-fluid main">
+    
+         <div class="row1">
+    
+          <div class="p-col-6 p-md-6 gap input-container">
+            <input pInputText id="name" formControlName="name" placeholder="Name" />
+            <div *ngIf="form['name'].touched && form['name'].invalid" class="p-error abs">
+              <span class="p-error-text" *ngIf="form['name'].errors?.['required']">Name is required.</span>
+              <span class="p-error-text" *ngIf="form['name'].errors?.['minlength']">Min length is 2.</span>
+            </div>
+          </div>
+          
+          <div class="p-col-6 p-md-6 gap input-container">
+            <input pInputText id="email" formControlName="email" placeholder="Email Address" />
+            <div *ngIf="form['email'].touched && form['email'].invalid" class="p-error abs">
+              <span class="p-error-text" *ngIf="form['email'].errors?.['required']">Email is required.</span>
+              <span class="p-error-text" *ngIf="form['email'].errors?.['email']">Invalid email format.</span>
+            </div>
+          </div>
+    
+         </div>
+          
+         <div class="row2">
+    
+          <div class="p-col-6 p-md-6 gap input-container">
+            <input pInputText id="phoneNumber" formControlName="phoneNumber" placeholder="Phone Number" />
+            <div *ngIf="form['phoneNumber'].touched && form['phoneNumber'].invalid" class="p-error abs">
+              <span class="p-error-text" *ngIf="form['phoneNumber'].errors?.['required']">Phone Number is required.</span>
+              <!-- Add additional validation checks as needed -->
+            </div>
+          </div>
+
+          <div class="p-col-6 p-md-6 gap input-container">
+            <p-calendar id="dateOfBirth" [showIcon]="true" formControlName="dateOfBirth" placeholder="Date of Birth"></p-calendar>
+            <div *ngIf="form['dateOfBirth'].touched && form['dateOfBirth'].invalid" class="p-error abs">
+              <span class="p-error-text" *ngIf="form['dateOfBirth'].errors?.['required']">Date of Birth is required.</span>
+              <!-- Add additional validation checks as needed -->
+            </div>
+          </div>
+          
+         </div>
+
+          <div class="row3">
+    
+            <!-- <div class="p-col-12 p-md-6 gap" id="address">
+              <input pInputText id="address" formControlName="address" placeholder="Address" />
+
+              <div *ngIf="form['address'].touched && form['address'].invalid" class="p-error abs">
+
+                <span class="p-error-text" *ngIf="form['address'].errors?.['required']">Address is required.</span>
+              </div>
+            </div> -->
+            <div class="p-col-12 p-md-6 gap" id="address">
+              <input pInputText formControlName="address" placeholder="Address" />
+            
+              <div *ngIf="form['address'].touched && form['address'].invalid" class="p-error abs">
+                <span class="p-error-text" *ngIf="form['address'].errors?.['required']">Address is required.</span>
+                <!-- You can add more validation messages here as needed -->
+              </div>
+            </div>
+    
+          </div>
+
+         
+          
+    
+          <div class="row4">
+    
+            <div class="p-col-4 p-md-6 gap" id="city">
+              <p-dropdown formControlName="city" [options]="cityOptions" placeholder="City"></p-dropdown>
+            </div>
+            <div class="p-col-4 p-md-6 gap" id="state">
+              <p-dropdown formControlName="state" [options]="stateOptions" placeholder="State"></p-dropdown>
+            </div>
+            <div class="p-col-4 p-md-6 gap" id="country">
+              <p-dropdown formControlName="country" [options]="countryOptions" placeholder="Country"></p-dropdown>
+            </div>
+    
+          </div>
+         
+    
+          
+         
+    
+        </div>
+      </form>
+    
+    </div>
+  
+  </div>
+  
+  <div class="row12345">
+        <button pButton type="submit" label="Save"></button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

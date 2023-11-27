@@ -3,25 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
-
-import {ReactiveFormComponent} from '../app/reactive-form/reactive-form.component';
-import { FigmaComponent } from './figma/figma.component'
-
-
-
-
+import { MyComponentComponent } from './my-component/my-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReactiveFormComponent,
-    FigmaComponent
+    MyComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

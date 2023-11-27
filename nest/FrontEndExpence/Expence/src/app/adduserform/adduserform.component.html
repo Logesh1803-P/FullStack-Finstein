@@ -1,0 +1,185 @@
+<!-- <form [formGroup]="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  
+    <label for="category">Category:</label>
+    <input type="text" id="category" formControlName="category">
+  
+    <label for="Amount">Amount:</label>
+    <input type="number" id="Amount" formControlName="Amount">
+  
+    <label for="date">Date:</label>
+    <input type="date" id="date" formControlName="date">
+  
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+  </form> -->
+
+  <!-- <form [formGroup]="userForm" class="p-mb-3">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col-12 p-md-6">
+        <label for="name">Name</label>
+        <input type="text" id="name" pInputText formControlName="name">
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="category">Category</label>
+        <input type="text" id="category" pInputText formControlName="category">
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="Amount">Amount</label>
+        <input type="number" id="Amount" pInputNumber formControlName="Amount">
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+        <label for="date">Date</label>
+        <input type="date" id="date" pInputText formControlName="date">
+      </div>
+      <div class="p-field p-col-12">
+        <label for="description">Description</label>
+        <textarea id="description" pInputTextarea formControlName="description"></textarea>
+      </div>
+    </div>
+    <button type="submit" pButton [disabled]="userForm.invalid" class="p-mt-2">Submit</button>
+  </form>
+   -->
+<div class="form0">
+
+    <form [formGroup]="userForm" class="p-mb-3 form1">
+
+        <div class="p-grid p-fluid">
+          
+
+          <div class="p-col-12 p-md-6 gap">
+
+            <label class="label" for="name">Name</label>
+            <input type="text" 
+            id="name" 
+            pInputText        
+            maxlength="25"
+            minlength="2"
+            formControlName="name"
+            class="p-inputtext"
+            
+            >
+            <div *ngIf="form['name'].touched && form['name'].invalid" class="p-error abs">
+
+              <span class="p-error-text" *ngIf="form['name'].errors?.['required'] ">Name is required.</span>
+              <span class="p-error-text" *ngIf="form['name'].errors?.['minlength'] ">Min length is 2.</span>
+              
+            </div>
+            
+           
+          </div>
+
+
+        
+
+          
+          <!-- <div class="o-div">
+            <label for="category">Category:</label>
+            <p-dropdown 
+            [options]="[{label: 'Option 1', value: 'option1'}, {label: 'Option 2', value: 'option2'}]"
+              optionLabel="label" 
+              placeholder="Select a Category" 
+              formControlName="category">
+            </p-dropdown>
+          
+            <div *ngIf="(form['category'].touched && form['category'].invalid) || (show && form['category'].invalid)" class="text-danger">
+              Category name is required
+            </div>
+          </div> -->
+
+          <div class="o-div gap">
+
+            <label class="label" for="category">Category:</label>
+            <p-dropdown 
+              [options]="categories" 
+              optionLabel="label" 
+              placeholder="Select a Category" 
+              [ngClass]="{'is-invalid': (form['category'].touched && form['category'].invalid) || (show && form['category'].invalid)}"              
+              formControlName="category">
+            </p-dropdown>
+
+            <div *ngIf="form['category'].touched && form['category'].invalid" class="p-error cat">
+
+              <span class="p-error-text" *ngIf="form['category'].errors?.['required'] ">category is required.</span>
+              
+              
+            </div>
+          
+            
+          </div>
+          
+          
+
+
+        
+          
+          
+
+
+          <div class="p-col-12 p-md-6 gap">
+
+            <label class="label" for="Amount">Amount</label>
+            <!-- <input type="number" id="Amount" pInputNumber formControlName="Amount"> -->
+           
+            <p-inputNumber 
+            inputId="integeronly"  
+            formControlName="Amount"
+           >
+          </p-inputNumber>
+
+
+            <div *ngIf="form['Amount'].touched && form['Amount'].invalid" class="p-error abs">
+
+              <span class="p-error-text" *ngIf="form['Amount'].errors?.['required'] ">Amount is required.</span>
+              
+              
+            </div>
+          </div>
+
+
+          <div class="p-col-12 p-md-6 gap">
+            <label class="label" for="date">Date</label>
+            <input type="date" id="date" pInputText 
+            formControlName="date"
+            [ngClass]="{'is-invalid': (form['date'].touched && form['date'].invalid) || (show && form['date'].invalid) || (form['date'].dirty && form['date'].invalid)}"
+            >
+            <div *ngIf="form['date'].touched && form['date'].invalid" class="p-error abs">
+
+              <span class="p-error-text" *ngIf="form['date'].errors?.['required'] ">Date is required.</span>
+              
+              
+            </div>
+          </div>
+
+
+          <div class="p-col-12 gap_d">
+            <label class="label" for="description">Description</label>
+
+            <textarea id="description" 
+            pInputTextarea 
+            formControlName="description"
+            [ngClass]="{'is-invalid': (form['description'].touched && form['description'].invalid) || (show && form['description'].invalid) || (form['description'].dirty && form['description'].invalid)}"
+
+            >
+
+            </textarea>
+            <div *ngIf="form['description'].touched && form['description'].invalid" class="p-error abs_d">
+
+              <span class="p-error-text" *ngIf="form['description'].errors?.['required'] ">Description is required.</span>
+              
+              
+            </div>
+          </div>
+        </div>
+        <button type="submit" pButton  class="p-mt-2 gap" (click)="myfun()">Submit</button>
+      </form>
+
+</div>
+
+
+  
+  
+  

@@ -14,7 +14,7 @@
         <button  (click)="retrieveData()">retrive</button>
 
     </form>
-
+<!-- 
     <ul >
         <table>
             <tr>
@@ -33,21 +33,36 @@
             </tr>
         </table>
         
-    </ul>
+    </ul> -->
 
 
     <table>
 
         <tr>
-            <th>Name</th>
-            <th>age</th>
-            <th>dept</th>
+            <table>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone Number</th>
+                  <th>Department</th>
+                  <th>Gender</th>
+                  <th>Terms and Conditions</th>
+                </tr>
+               
+              </table>
+              
 
         </tr>
         <tr  *ngFor="let s of studentX">
-            <th>{{s.name}}</th>
-            <th>{{s.age}}</th>
-            <th>{{s.department}}</th>
+               <th>{{s.firstname}}</th>
+                <td>{{s.firstname}}</td>
+                <td>{{s.lastname}}</td>
+                <td>{{s.phoneNumber}}</td>
+                <td>{{s.dept}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.termsAndCondition}}</td>
+            
+            
 
         </tr>
         

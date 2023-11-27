@@ -12,6 +12,7 @@ import { CRUDComponent } from './crud/crud.component';
 import { StudentComponent } from './student/student.component';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { MenuModule } from 'primeng/menu';
+import { CRUDDBComponent } from './cruddb/cruddb.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MenuModule } from 'primeng/menu';
     FormComponent,
     CRUDComponent,
     StudentComponent,
-    BootstrapComponent
+    BootstrapComponent,
+    CRUDDBComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+.form0{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100vh;
+
+    .form1{
+        width: 70%;
+        div{
+            .gap{
+                padding-bottom: 50px;
+                
+                position: relative;
+                .label{
+                    display: block;
+                    margin-bottom: 16px;
+                   
+                }
+                .abs{
+                    position: absolute;
+                    top:100px;
+                }
+                .cat{
+                    position: absolute;
+                    top: 130px;
+                }
+            }
+            .gap_d{
+                position: relative;
+                padding-bottom: 50px;
+                .label{
+                    display: block;
+                    margin-bottom: 16px;
+                   
+                }
+                
+                .abs_d{
+                    position: absolute;
+                    top:110px;
+                }
+            }
+        }
+
+    }
+}
+

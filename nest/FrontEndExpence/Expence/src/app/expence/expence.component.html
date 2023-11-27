@@ -137,6 +137,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-product>
+
             <tr>
                 <td>{{product.name}}</td>
                 <td>{{product.category}}</td>
@@ -227,28 +228,28 @@
                   <div class="o-div gap">
         
                     <label class="label" for="category">Category:</label>
-                    <!-- <p-dropdown 
+                    <p-dropdown 
                       [options]="categories" 
                       
-                      optionLabel="label"
-                      optionValue="Category" 
+                      optionLabel="name"
+                      optionValue="id" 
                       placeholder="Select a Category" 
-                      [ngClass]="{'is-invalid': (form['category'].touched && form['category'].invalid) || (show && form['category'].invalid)}"              
-                      formControlName="category"
+                      [ngClass]="{'is-invalid': (form['categoryId'].touched && form['categoryId'].invalid) || (show && form['categoryId'].invalid)}"              
+                      formControlName="categoryId"
                       value=""
                     >
-                    </p-dropdown> -->
-                    <input 
+                    </p-dropdown>
+                    <!-- <input 
                           type="text"
                           [ngClass]="{'is-invalid': (form['category'].touched && form['category'].invalid) || (show && form['category'].invalid)}"              
                           formControlName="category"
                           placeholder="Enter your Category"
                           pInputText 
-                      />
+                      /> -->
         
-                    <div *ngIf="form['category'].touched && form['category'].invalid" class="p-error cat">
+                    <div *ngIf="form['categoryId'].touched && form['categoryId'].invalid" class="p-error cat">
         
-                      <span class="p-error-text" *ngIf="form['category'].errors?.['required'] ">category is required.</span>
+                      <span class="p-error-text" *ngIf="form['categoryId'].errors?.['required'] ">category is required.</span>
                       
                       
                     </div>

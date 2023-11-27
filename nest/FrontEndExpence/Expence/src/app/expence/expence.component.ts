@@ -49,6 +49,8 @@ export class ExpenceComponent implements OnInit {
   DialogDelete = false;
   DeleteId :any;
 
+  categories!:category[]
+
 
 
   // constructor(private service : ExpenceService){}
@@ -58,6 +60,14 @@ export class ExpenceComponent implements OnInit {
   ngOnInit(): void {
     this.getall();
     this.initializeForm();
+
+    this.service.getCategory().subscribe((da:any) =>{
+      this.categories = da['data']
+      console.log(this.categories);
+      
+     
+  
+    })
 
     // this.update();
   }
@@ -121,8 +131,6 @@ export class ExpenceComponent implements OnInit {
 
 
 
-
-
       // console.log("log----------------------------get user by id", this.GetbyId);
       // console.log("log----------------------------get user by date", this.GetbyId.date);
 
@@ -152,9 +160,7 @@ export class ExpenceComponent implements OnInit {
 
       // console.log('ccccccccccccccc---------------forrrrrr',outputDateString);
 
-      console.log('cccc---------------forrrrrr', this.GetbyId);
-
-      
+      console.log('cccc---------------forrrrrr', this.GetbyId); 
 
     })
 
@@ -374,11 +380,8 @@ export class ExpenceComponent implements OnInit {
   }
 
 
-  // categories = [
-  //   { label: 'Food', value: 'Food' },
-  //   { label: 'Travel', value: 'Travel' },
-  //   { label: 'Other', value: 'Others' }
-  // ];
+
+  
 
 
 
@@ -388,7 +391,7 @@ export class ExpenceComponent implements OnInit {
   initializeForm() {
     this.userForm = this.fb.group({
       name: [null, [Validators.required]],
-      category: [null, [Validators.required]],
+      categoryId: [null, [Validators.required]],
       Amount: [null, [Validators.required]],
       date: [null, [Validators.required]],
       description: [null, [Validators.required]],
@@ -404,4 +407,9 @@ export class ExpenceComponent implements OnInit {
 
 
 
+}
+
+interface category{
+  name:string
+  id:number
 }

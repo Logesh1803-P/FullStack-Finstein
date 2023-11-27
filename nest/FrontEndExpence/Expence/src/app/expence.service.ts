@@ -48,5 +48,8 @@ export class ExpenceService {
  deleteUser(id:any){
   return this.htttpclient.delete(this.apiUrl+'/softDelete/'+id)
  }
- 
+ //-------category------
+ getCategory(){
+  return this.htttpclient.get(this.apiUrl+'/getCategory')
+}
 }

@@ -52,4 +52,13 @@ export class ExpenceService {
  getCategory(){
   return this.htttpclient.get(this.apiUrl+'/getCategory')
 }
+
+ getsort(data:any){
+  return  this.htttpclient.get(this.apiUrl+'/getSortUsersByField/'+data)
+ }
+
+ filtering(data:any){
+  return  this.htttpclient.get(this.apiUrl+'/search/'+data)
+ }
+ 
 }

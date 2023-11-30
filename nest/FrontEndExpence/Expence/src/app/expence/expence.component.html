@@ -19,6 +19,24 @@
     
         <div class="header2">
             <div class="card flex justify-content-center">
+                
+                <!-- <span class="search-in">
+                  <i class="pi pi-search"></i>
+                  <input type="text" pInputText [(ngModel)]="filteredList" (input)="filterinput()"/>
+                </span> -->
+
+                <div class="p-input-icon-left">
+                  <i class="pi pi-search"></i>
+                  <input type="text" pInputText [(ngModel)]="filteredList" (input)="filterinput()" />
+              </div>
+
+                <!-- <div class="p-inputgroup">
+                  <span class="p-inputgroup-addon">
+                    <i class="pi pi-search"></i>
+                  </span>
+                  <input type="text" pInputText [(ngModel)]="filteredList" (input)="filterinput()" class="p-inputtext"/>
+                </div> -->
+
                 <p-button  #addButton label="Add Expenses" icon="pi pi-plus" (click)="resetForm(); createUsers()"></p-button>
             </div>
         
@@ -126,12 +144,14 @@
     <p-table [value]="details" [scrollable]="true" [scrollHeight]="'500px'" [paginator]="true" [rows]="5" [tableStyle]="{'min-width': '60rem'}">
         <ng-template pTemplate="header">
             <tr>
-                <th pSortableColumn="name" style="width:15%">Name  <p-sortIcon field="name"></p-sortIcon></th>
-                <th pSortableColumn="category" style="width:15%">Category <p-sortIcon field="category"></p-sortIcon></th>
-                <th pSortableColumn="Amount" style="width:15%">Amount<p-sortIcon field="Amount"></p-sortIcon></th>
-                <th pSortableColumn="description" style="width:15%">Description<p-sortIcon field="description"></p-sortIcon></th>
-                <th pSortableColumn="date" style="width:15%">Date<p-sortIcon field="date"></p-sortIcon></th>
-
+                <th style="width:15%">Name  <p-sortIcon field="name" (click)="sort('name')"></p-sortIcon></th>
+                <th style="width:15%">Category <p-sortIcon field="category" (click)="sort('categoryId')"></p-sortIcon></th>
+                <th  style="width:15%">Amount<p-sortIcon field="Amount" (click)="sort('Amount')"></p-sortIcon></th>
+                <th  style="width:15%">Description<p-sortIcon field="description" (click)="sort('description')"></p-sortIcon></th>
+                <th style="width:15%">Date<p-sortIcon field="date" (click)="sort('date')"></p-sortIcon></th>
+                <!-- pSortableColumn="Amount"
+                pSortableColumn="description"
+                pSortableColumn="date"  -->
                 <th pSortableColumn="edit" style="width:15%">Edit<p-sortIcon field="edit"></p-sortIcon></th>
 
             </tr>
@@ -191,7 +211,9 @@
                     maxlength="25"
                     minlength="2"
                     formControlName="name"
-                    class="p-inputtext"  
+                    class="p-inputtext" 
+                    pattern="^[A-Za-z0-9@_\-]+$"
+                    [ngClass]="{'p-invalid': form['name'].touched && form['name'].invalid }" 
 
                     
 
@@ -201,11 +223,31 @@
         
                       <span class="p-error-text" *ngIf="form['name'].errors?.['required'] ">Name is required.</span>
                       <span class="p-error-text" *ngIf="form['name'].errors?.['minlength'] ">Min length is 2.</span>
+                      <span class="p-error-text" *ngIf="form['name'].errors?.['pattern'] ">Pattern Not Match.</span>
+
                       
                     </div>
                     
                    
                   </div>
+
+                  <!-- <div class="p-col-12 p-md-6 gap" [class.p-invalid]="form['name'].touched && form['name'].invalid">
+                    <label class="label" for="name">Name</label>
+                    <input type="text" 
+                           id="name" 
+                           pInputText        
+                           maxlength="25"
+                           minlength="2"
+                           formControlName="name"
+                    >
+                  
+                    <div *ngIf="form['name'].touched && form['name'].invalid" class="p-error abs">
+                        <span class="p-error-text" *ngIf="form['name'].hasError('required')">Name is required.</span>
+                        <span class="p-error-text" *ngIf="form['name'].hasError('minlength')">Min length is 2.</span>
+                    </div>
+                </div>
+                 -->
+                  
         
         
                 
@@ -318,6 +360,9 @@
                     <textarea id="description" 
                     pInputTextarea 
                     formControlName="description"
+                    pattern="^[A-Za-z0-9@_\-]+$"
+                    maxlength="25"
+
                     [ngClass]="{'is-invalid': (form['description'].touched && form['description'].invalid) || (show && form['description'].invalid) || (form['description'].dirty && form['description'].invalid)}"
                    
                     >
@@ -327,7 +372,8 @@
         
                       <span class="p-error-text" *ngIf="form['description'].errors?.['required'] ">Description is required.</span>
                       
-                      
+                      <span class="p-error-text" *ngIf="form['description'].errors?.['pattern'] ">Pattern not match.</span>
+
                     </div>
                   </div>
                   <div class="formButton">

@@ -30,7 +30,7 @@ export class ExpenceComponent implements OnInit {
   show: boolean = false;
   username!: any;
   FormValue: any
-
+  name!: any;
   sidebarVisible = false;
   Expences: any;
   details: any;
@@ -42,14 +42,16 @@ export class ExpenceComponent implements OnInit {
   updateId: any;
 
   Dvisible = false;
-  DialogUpdate= false;
+  DialogUpdate = false;
 
-  UpdateVar:any;
+  UpdateVar: any;
 
   DialogDelete = false;
-  DeleteId :any;
+  DeleteId: any;
 
-  categories!:category[]
+  categories!: category[]
+  filteredList!: string;
+  list: any;
 
 
 
@@ -61,12 +63,12 @@ export class ExpenceComponent implements OnInit {
     this.getall();
     this.initializeForm();
 
-    this.service.getCategory().subscribe((da:any) =>{
+    this.service.getCategory().subscribe((da: any) => {
       this.categories = da['data']
       console.log(this.categories);
-      
-     
-  
+
+
+
     })
 
     // this.update();
@@ -115,18 +117,19 @@ export class ExpenceComponent implements OnInit {
 
     this.service.editUser(id).subscribe((res: any) => {
 
-      console.log("logre--------------------res.data", res.data);
+      console.log("logre--------------------eeeeeeeeeeeeeeeeeeeeeeditres.data", res);
 
       // this.GetbyId = res.data;
 
       // this.GetbyId = res.data;
-      let data=res.data;
-    //  res.data.date=res.data.date.slice(0,10);
+      let data = res.data;
+      //  res.data.date=res.data.date.slice(0,10);
       res.data.date = new Date(res.data.date);
-      console.log("dateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee---",res.data.date);
+      // console.log("dateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee---",res.data.date);
 
       // this.userForm.patchValue(this.GetbyId)
       this.userForm.patchValue(res.data);
+
       console.log(res.data)
 
 
@@ -156,11 +159,11 @@ export class ExpenceComponent implements OnInit {
       // console.log(newExpense);
 
       // Input date string
-     
+
 
       // console.log('ccccccccccccccc---------------forrrrrr',outputDateString);
 
-      console.log('cccc---------------forrrrrr', this.GetbyId); 
+      console.log('cccc---------------forrrrrr', this.GetbyId);
 
     })
 
@@ -203,27 +206,16 @@ export class ExpenceComponent implements OnInit {
     let id: number = this.updateId
     console.log("-----------update id", id);
 
-
-    // const {name,Amount,date,description}=this.userForm.value;
-    // console.log(this.userForm.value)
-    // const {value} = this.userForm.value.category
-    // const category:string = this.userForm.value
-
-
-
-
-    // console.log(name,Amount,date,description,value)
-    // const newExpense:{name:string,Amount:number,date:Date,description:string,category:string} ={name,Amount,date,description,category}
-    // console.log(newExpense);
-
     this.service.updateUser(data, id).subscribe((data) => {
 
       this.getall();
+      this.showTopCenter('success', 'Update Expense Successfully!', 5000);
 
     })
 
   }
-  update(data: any){
+
+  update(data: any) {
     // this.username=this.userForm.value;
 
     if (!this.userForm.valid) {
@@ -232,7 +224,7 @@ export class ExpenceComponent implements OnInit {
       // this.showTopCenter()
       this.showTopCenter('error', 'Please fill mandatory fields!', 500000);
       this.Dvisible = false;
-       
+
 
     }
     else {
@@ -242,10 +234,10 @@ export class ExpenceComponent implements OnInit {
       this.DialogUpdate = true;
       this.UpdateVar = data
 
-      console.log("uppppppppppppppppppppppp aray",this.UpdateVar);
-      
+      console.log("uppppppppppppppppppppppp aray", this.UpdateVar);
 
-      
+
+
 
     }
 
@@ -253,21 +245,21 @@ export class ExpenceComponent implements OnInit {
 
     // this.router.navigate(['/AddUser/Home']); 
   }
-  YesConformationUpdate(){
+  YesConformationUpdate() {
     this.sidebarVisible = false;
     // this.Dvisible = false;
     this.DialogUpdate = false;
     console.log("oooooooooooo");
 
     // this.messageService.add({ severity: 'success', summary: "Success", sticky: true , life:4500 });
-    this.showTopCenter('success', 'Update Expense Successfully!', 5000);
-    
+
+
     this.Update(this.UpdateVar)
     // this.getall();
 
   }
 
-  NoconformationUpdate(){
+  NoconformationUpdate() {
     this.DialogUpdate = false
 
   }
@@ -304,7 +296,6 @@ export class ExpenceComponent implements OnInit {
     console.log("oooooooooooo");
 
     // this.messageService.add({ severity: 'success', summary: "Success", sticky: true , life:4500 });
-    this.showTopCenter('success', 'Add Expense Successfully!', 5000);
     this.addUser();
     // this.getall();
   }
@@ -334,6 +325,8 @@ export class ExpenceComponent implements OnInit {
 
     this.service.createUser(AddUserForm).subscribe((data) => {
       this.getall();
+      this.showTopCenter('success', 'Add Expense Successfully!', 5000);
+
     });
 
   }
@@ -344,21 +337,21 @@ export class ExpenceComponent implements OnInit {
     this.DialogDelete = true
     this.DeleteId = id;
     console.log("del-------------------", id);
-   
+
 
 
   }
-  YesConformationDelete(){
+  YesConformationDelete() {
     this.service.deleteUser(this.DeleteId).subscribe((data) => {
-      
-      this.getall();
-      this.DialogDelete = false
+
+      this.getall();     
+      this.DialogDelete = false;
+      this.showTopCenter('success', 'Delete Expense Successfully!', 5000);
     })
-    this.showTopCenter('success', 'Delete Expense Successfully!', 5000);
   }
 
-  NoConformationDelete(){
-    this.DialogDelete = false
+  NoConformationDelete() {
+    this.DialogDelete = false;
   }
 
 
@@ -376,12 +369,12 @@ export class ExpenceComponent implements OnInit {
   }
 
   cancelButton() {
-    this.sidebarVisible = false  
+    this.sidebarVisible = false
   }
 
 
 
-  
+
 
 
 
@@ -403,13 +396,34 @@ export class ExpenceComponent implements OnInit {
     return this.userForm.controls;
   }
 
+  sort(data: any) {
+    this.service.getsort(data).subscribe((data: any) => {
+
+      this.details = data.data;
+
+    })
+
+  }
+
+  filterinput() {
+    const trimmedFilteredList = this.filteredList.trim();
+
+    if (trimmedFilteredList !== '' && trimmedFilteredList !== '32') {
+      this.service.filtering(trimmedFilteredList).subscribe((filter: any) => {
+        this.details = filter.data;
+        // console.log(this.list);
+      });
+    } else {
+      this.getall();
+    }
+  }
 
 
 
 
 }
 
-interface category{
-  name:string
-  id:number
+interface category {
+  name: string
+  id: number
 }

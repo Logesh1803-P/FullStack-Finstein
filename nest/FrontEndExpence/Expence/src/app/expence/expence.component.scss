@@ -47,6 +47,15 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            // align-items: center
+            .card{
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                .p-inputtext {
+                    margin-right: 40px;
+                }
+            }
         }
     }
 
@@ -65,9 +74,9 @@
 
 
 .card{
+    
     display: flex;
     justify-content: center;
-    
     
     p-table{
         width: 90%;

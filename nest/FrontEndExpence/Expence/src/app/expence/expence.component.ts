@@ -52,6 +52,7 @@ export class ExpenceComponent implements OnInit {
   categories!: category[]
   filteredList!: string;
   list: any;
+date: any;
 
 
 
@@ -117,7 +118,7 @@ export class ExpenceComponent implements OnInit {
 
     this.service.editUser(id).subscribe((res: any) => {
 
-      console.log("logre--------------------eeeeeeeeeeeeeeeeeeeeeeditres.data", res);
+      console.log("logre--------------------eeeeeeeeeeeeeeeeeeeeeeditres.data", res.data);
 
       // this.GetbyId = res.data;
 
@@ -206,7 +207,7 @@ export class ExpenceComponent implements OnInit {
     let id: number = this.updateId
     console.log("-----------update id", id);
 
-    this.service.updateUser(data, id).subscribe((data) => {
+    this.service.updateUser(data, id).subscribe((data:any) => {
 
       this.getall();
       this.showTopCenter('success', 'Update Expense Successfully!', 5000);

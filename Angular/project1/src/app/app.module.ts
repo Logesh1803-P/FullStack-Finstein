@@ -16,6 +16,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { DockModule } from 'primeng/dock';
+import { ChartModule } from 'primeng/chart';
 
 
 
@@ -36,7 +37,8 @@ import { DockModule } from 'primeng/dock';
     SplitButtonModule,
     DockModule,
     FormsModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

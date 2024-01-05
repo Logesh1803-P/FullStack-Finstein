@@ -2,3 +2,79 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
+
+
+// p-chart{
+//     height: 10%;
+//     width: 10%;
+//     margin: auto;
+        
+// }
+
+    .single-chart{
+
+        p-chart{
+            height: 100px;
+            width: 100px;
+                
+        }
+        // div{
+        //     position: absolute;
+        // }  
+       
+    }
+
+    // .multi-chart{
+    //     // display: flex;
+    //     // justify-content: center;
+    //     // align-items: center;
+    //     // width: 100%;
+    //     // height: 50%;
+    //     // background-color: rgb(195, 117, 40);
+    //     // position: relative;
+        
+    //             .chart1{
+    //                 position: absolute;
+    //                 width: 40%;
+    //                 height: 40%;
+    //             }
+    //             .chart2{
+    //                 position: absolute;
+    //                 width: 30%;
+    //                 height: 30%;
+    //             }
+    //             .chart3{
+    //                 position: absolute;
+    //                 width: 20%;
+    //                 height: 20%;
+    //             }
+    //   }
+
+
+    // .card1{
+
+    //     p-chart{
+    //         width: 100%;
+    //         height: 100%;
+    //         // position: absolute;
+
+    //     }
+    // }
+    // .card2{
+
+    //     p-chart{
+    //         width: 100%;
+    //         height: 100%;
+    //         // position: absolute;
+
+    //     }
+    // }
+    // .card3{
+
+    //     p-chart{
+    //         width: 100%;
+    //         height: 100%;
+    //         // position: absolute;
+
+    //     }
+    // }

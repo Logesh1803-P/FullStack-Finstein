@@ -59,17 +59,17 @@
     width: 70px;
   }
 
-  input.ng-touched.ng-invalid {
-    border: 1px solid red;
-  }
+  // input.ng-touched.ng-invalid {
+  //   border: 1px solid red;
+  // }
 
-  textarea.ng-touched.ng-invalid {
-    border: 1px solid red;
-  }
+  // textarea.ng-touched.ng-invalid {
+  //   border: 1px solid red;
+  // }
 
-  p-inputNumber.ng-touched.ng-invalid {
-    border: 1px solid red;
-  }
+  // p-inputNumber.ng-touched.ng-invalid {
+  //   border: 1px solid red;
+  // }
 
   // p-calendar.ng-touched.ng-invalid{
   //   border: 1px solid red;
@@ -90,3 +90,6 @@
   //   // Add any other styles you need
   // }
 
+  .error{
+    border-color: red;
+}

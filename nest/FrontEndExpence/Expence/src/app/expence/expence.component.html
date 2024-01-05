@@ -213,7 +213,7 @@
                     formControlName="name"
                     class="p-inputtext" 
                     pattern="^[A-Za-z0-9@_\-]+$"
-                    [ngClass]="{'p-invalid': form['name'].touched && form['name'].invalid }" 
+                    [ngClass]="(form['name'].touched && form['name'].invalid )?'ng-invalid ng-dirty':''" 
 
                     
 
@@ -272,13 +272,13 @@
                     <label class="label" for="category">Category:</label>
                     <p-dropdown 
                       [options]="categories" 
-                      
+                      class="error"
                       optionLabel="name"
                       optionValue="id" 
                       placeholder="Select a Category" 
-                      [ngClass]="{'is-invalid': (form['categoryId'].touched && form['categoryId'].invalid) || (show && form['categoryId'].invalid)}"              
+                      [styleClass]="((form['categoryId'].touched && form['categoryId'].invalid) || (show && form['categoryId'].invalid) )? 'error' :''"    
+                      value=""  
                       formControlName="categoryId"
-                      value=""
                     >
                     </p-dropdown>
                     <!-- <input 
@@ -315,12 +315,14 @@
                     <p-inputNumber 
                     inputId="integeronly"  
                     formControlName="Amount"
+                    [ngClass]="(form['Amount'].touched && form['Amount'].invalid )?'ng-invalid ng-dirty':''" 
+
                     
                    >
                   </p-inputNumber>
         
         
-                    <div *ngIf="form['Amount'].touched && form['Amount'].invalid" class="p-error abs">
+                    <div *ngIf="(form['Amount'].dirty || form['Amount'].touched)&& form['Amount'].invalid" class="p-error abs">
         
                       <span class="p-error-text" *ngIf="form['Amount'].errors?.['required'] ">Amount is required.</span>
                       
@@ -363,9 +365,12 @@
                     pattern="^[A-Za-z0-9@_\-]+$"
                     maxlength="25"
 
-                    [ngClass]="{'is-invalid': (form['description'].touched && form['description'].invalid) || (show && form['description'].invalid) || (form['description'].dirty && form['description'].invalid)}"
+                    [ngClass]="((form['description'].touched && form['description'].invalid ))|| (show && form['description'].invalid)?'ng-invalid ng-dirty':''" 
+
                    
                     >
+                    <!-- [ngClass]="{'is-invalid': (form['description'].touched && form['description'].invalid) || (show && form['description'].invalid) || (form['description'].dirty && form['description'].invalid)}" -->
+
         
                     </textarea>
                     <div *ngIf="form['description'].touched && form['description'].invalid" class="p-error abs_d">
